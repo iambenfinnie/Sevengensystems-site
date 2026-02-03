@@ -1,20 +1,18 @@
 import { Link } from 'react-router-dom'
-import { Button } from '../components/ui/button'
+import { Button } from '@/components/ui/button'
 
-function Home() {
+export function Home() {
   return (
     <div className="bg-white">
       <div className="mx-auto max-w-7xl px-4 py-24 sm:px-6 lg:px-8">
         <div className="text-center">
-          <h1 className="text-4xl font-bold tracking-tight text-gray-900 sm:text-5xl md:text-6xl">
-            Welcome to Our
-            <span className="block text-blue-600">Marketing Site</span>
+          <h1 className="text-4xl font-bold tracking-tight text-gray-900 sm:text-6xl">
+            Welcome to Our Site
           </h1>
-          <p className="mx-auto mt-6 max-w-2xl text-lg text-gray-500">
-            We help businesses grow with innovative marketing solutions.
-            Discover how we can transform your brand and reach new audiences.
+          <p className="mt-6 text-lg leading-8 text-gray-600">
+            We help businesses grow with modern solutions and expert guidance.
           </p>
-          <div className="mt-10 flex justify-center gap-4">
+          <div className="mt-10 flex items-center justify-center gap-x-6">
             <Link to="/services">
               <Button variant="primary" size="lg">
                 Our Services
@@ -31,5 +29,3 @@ function Home() {
     </div>
   )
 }
-
-export default Home

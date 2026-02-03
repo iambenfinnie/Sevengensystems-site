@@ -1,7 +1,7 @@
 import { useState, FormEvent } from 'react'
-import { Button } from '../components/ui/button'
+import { Button } from '@/components/ui/button'
 
-function Contact() {
+export function Contact() {
   const [formData, setFormData] = useState({
     name: '',
     email: '',
@@ -11,7 +11,7 @@ function Contact() {
   const handleSubmit = (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault()
     console.log('Form submitted:', formData)
-    alert('Thank you for your message! We will get back to you soon.')
+    alert('Thank you for your message!')
     setFormData({ name: '', email: '', message: '' })
   }
 
@@ -23,7 +23,7 @@ function Contact() {
             Contact Us
           </h1>
           <p className="mt-4 text-lg text-gray-500">
-            Have a question or want to work with us? Send us a message!
+            Have a question? Send us a message!
           </p>
         </div>
         <form onSubmit={handleSubmit} className="mt-12 space-y-6">
@@ -34,7 +34,6 @@ function Contact() {
             <input
               type="text"
               id="name"
-              name="name"
               required
               value={formData.name}
               onChange={(e) => setFormData({ ...formData, name: e.target.value })}
@@ -48,7 +47,6 @@ function Contact() {
             <input
               type="email"
               id="email"
-              name="email"
               required
               value={formData.email}
               onChange={(e) => setFormData({ ...formData, email: e.target.value })}
@@ -61,7 +59,6 @@ function Contact() {
             </label>
             <textarea
               id="message"
-              name="message"
               rows={4}
               required
               value={formData.message}
@@ -69,15 +66,11 @@ function Contact() {
               className="mt-1 block w-full rounded-md border border-gray-300 px-3 py-2 shadow-sm focus:border-blue-500 focus:outline-none focus:ring-1 focus:ring-blue-500"
             />
           </div>
-          <div>
-            <Button type="submit" variant="primary" size="lg" className="w-full">
-              Send Message
-            </Button>
-          </div>
+          <Button type="submit" variant="primary" size="lg" className="w-full">
+            Send Message
+          </Button>
         </form>
       </div>
     </div>
   )
 }
-
-export default Contact

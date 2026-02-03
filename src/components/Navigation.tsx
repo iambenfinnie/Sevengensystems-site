@@ -1,6 +1,6 @@
 import { Link } from 'react-router-dom'
 
-function Navigation() {
+export function Navigation() {
   return (
     <nav className="bg-white shadow-sm">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
@@ -41,5 +41,3 @@ function Navigation() {
     </nav>
   )
 }
-
-export default Navigation

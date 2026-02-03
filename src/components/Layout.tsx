@@ -1,10 +1,10 @@
 import { Outlet } from 'react-router-dom'
-import Navigation from './Navigation'
-import Footer from './Footer'
+import { Navigation } from './Navigation'
+import { Footer } from './Footer'
 
-function Layout() {
+export function Layout() {
   return (
-    <div className="flex min-h-screen flex-col">
+    <div className="min-h-screen flex flex-col">
       <Navigation />
       <main className="flex-1">
         <Outlet />
@@ -13,5 +13,3 @@ function Layout() {
     </div>
   )
 }
-
-export default Layout
