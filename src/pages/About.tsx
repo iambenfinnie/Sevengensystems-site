@@ -76,25 +76,48 @@ export function About() {
       <section className="bg-gray-50 border-t border-gray-200">
         <div className="mx-auto max-w-3xl px-4 py-12 sm:px-6 lg:px-8">
           <h2 className="text-xl font-semibold text-gray-900">Leadership</h2>
-          <div className="mt-6 flex flex-col sm:flex-row gap-6">
-            <img
-              src="/team/rob-maclean.jpg"
-              alt="Robert Maclean, CEO of Seven Gen Systems"
-              className="w-36 h-36 rounded-lg object-cover flex-shrink-0"
-            />
-            <div>
-              <h3 className="text-base font-medium text-gray-900">Robert Maclean</h3>
-              <p className="text-sm text-gray-500">CEO</p>
-              <p className="mt-3 text-sm text-gray-600">
-                Robert Maclean is the CEO of Seven Gen Systems, leading the company's focus on practical AI
-                training and automation for organizations that want real results — not hype.
-              </p>
-              <p className="mt-2 text-sm text-gray-600">
-                He brings a systems-first mindset to AI adoption, emphasizing simple, reliable implementations
-                that reduce manual work, improve operations, and deliver measurable value. Robert is committed
-                to building responsible, long-term solutions grounded in Indigenous principles of sustainability,
-                trust, and accountability.
-              </p>
+          <div className="mt-6 space-y-8">
+            <div className="flex flex-col sm:flex-row gap-6">
+              <img
+                src="/team/rob-maclean.jpg"
+                alt="Robert Maclean, CEO of Seven Gen Systems"
+                className="w-36 h-36 rounded-lg object-cover flex-shrink-0"
+              />
+              <div>
+                <h3 className="text-base font-medium text-gray-900">Robert Maclean</h3>
+                <p className="text-sm text-gray-500">CEO</p>
+                <p className="mt-3 text-sm text-gray-600">
+                  Robert Maclean is the CEO of Seven Gen Systems, leading the company's focus on practical AI
+                  training and automation for organizations that want real results — not hype.
+                </p>
+                <p className="mt-2 text-sm text-gray-600">
+                  He brings a systems-first mindset to AI adoption, emphasizing simple, reliable implementations
+                  that reduce manual work, improve operations, and deliver measurable value. Robert is committed
+                  to building responsible, long-term solutions grounded in Indigenous principles of sustainability,
+                  trust, and accountability.
+                </p>
+              </div>
+            </div>
+            <div className="flex flex-col sm:flex-row gap-6">
+              <img
+                src="/team/ben-finnie.jpg"
+                alt="Ben Finnie, Head of Systems & Automation at Seven Gen Systems"
+                className="w-36 h-36 rounded-lg object-cover flex-shrink-0"
+              />
+              <div>
+                <h3 className="text-base font-medium text-gray-900">Ben Finnie</h3>
+                <p className="text-sm text-gray-500">Head of Systems & Automation</p>
+                <p className="mt-3 text-sm text-gray-600">
+                  Ben Finnie is the Head of Systems & Automation at Seven Gen Systems, responsible for the
+                  technical design and implementation of the company's AI-driven workflows and internal systems.
+                </p>
+                <p className="mt-2 text-sm text-gray-600">
+                  He focuses on turning real operational needs into reliable, maintainable automations —
+                  prioritizing clarity, stability, and measurable impact over experimental or hype-driven tools.
+                  Ben works closely with delivery teams and clients to ensure systems integrate smoothly into
+                  existing operations and perform consistently in real-world environments.
+                </p>
+              </div>
             </div>
           </div>
         </div>
