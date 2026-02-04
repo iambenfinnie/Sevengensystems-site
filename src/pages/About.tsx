@@ -8,9 +8,8 @@ export function About() {
         <div className="mx-auto max-w-3xl px-4 py-16 sm:px-6 lg:px-8">
           <h1 className="text-3xl font-bold tracking-tight text-gray-900">About Us</h1>
           <p className="mt-4 text-gray-600">
-            Seven Gen Systems is an Indigenous-owned AI education and implementation firm.
-            We help organizations build practical AI skills and adopt working automation —
-            with clear scope, honest guidance, and no vendor lock-in.
+            Seven Gen Systems is an Indigenous-owned firm that delivers AI training and automation
+            implementation. We keep things scoped, honest, and practical.
           </p>
         </div>
       </section>
@@ -20,18 +19,10 @@ export function About() {
         <div className="mx-auto max-w-3xl px-4 py-12 sm:px-6 lg:px-8">
           <h2 className="text-xl font-semibold text-gray-900">The Seven Generations principle</h2>
           <p className="mt-3 text-sm text-gray-600">
-            Our name reflects a principle rooted in Indigenous governance: that the decisions we make
-            today should consider their impact seven generations into the future.
-          </p>
-          <p className="mt-2 text-sm text-gray-600">
-            For us, this is a design and decision-making lens. It means we build systems that
-            are sustainable, understandable, and transferable — not clever solutions that create
-            dependency or technical debt. It means we prioritize long-term organizational health
-            over short-term efficiency gains.
-          </p>
-          <p className="mt-2 text-sm text-gray-600">
-            It also means we are honest about what AI can and cannot do, and we do not recommend
-            technology unless we believe it will serve an organization well over time.
+            Our name comes from an Indigenous governance principle: decisions today should
+            account for their impact seven generations forward. For us that means we build
+            things that last — systems your team can understand, maintain, and own — and
+            we do not recommend technology we would not trust to hold up over time.
           </p>
         </div>
       </section>
@@ -44,29 +35,25 @@ export function About() {
             <div>
               <h3 className="text-sm font-medium text-gray-900">Under-promise, over-deliver</h3>
               <p className="mt-1 text-sm text-gray-600">
-                We scope conservatively and aim to exceed expectations. We would rather deliver a reliable result
-                than make promises we cannot keep.
+                We scope conservatively and would rather surprise you with the result than with the invoice.
               </p>
             </div>
             <div>
               <h3 className="text-sm font-medium text-gray-900">Prove value before scale</h3>
               <p className="mt-1 text-sm text-gray-600">
-                Every engagement starts small and focused. We demonstrate results on a fixed-scope project
-                before discussing anything larger.
+                Every engagement starts small. We show results on a fixed-scope project before discussing anything bigger.
               </p>
             </div>
             <div>
               <h3 className="text-sm font-medium text-gray-900">Lean and accountable</h3>
               <p className="mt-1 text-sm text-gray-600">
-                Seven Gen Systems holds accountability for every deliverable. We may work with delivery partners
-                for specialized tasks, but quality assurance and client relationships stay with us.
+                We hold accountability for every deliverable. QA and client relationships stay with us.
               </p>
             </div>
             <div>
               <h3 className="text-sm font-medium text-gray-900">Build for independence</h3>
               <p className="mt-1 text-sm text-gray-600">
-                Our goal is for your organization to be stronger after working with us — not more dependent on us.
-                Everything we deliver is designed to be understood, operated, and owned by your team.
+                You should be stronger after working with us, not more dependent on us. Everything we deliver is yours to keep and run.
               </p>
             </div>
           </div>
