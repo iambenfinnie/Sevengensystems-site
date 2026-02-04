@@ -21,7 +21,7 @@ export function Contact() {
     <div>
       <section className="bg-white">
         <div className="mx-auto max-w-3xl px-4 py-16 sm:px-6 lg:px-8">
-          <h1 className="text-3xl font-bold tracking-tight text-gray-900">Let's connect</h1>
+          <h1 className="text-3xl font-bold tracking-tight text-gray-900">Get Started</h1>
           <p className="mt-3 text-gray-600">
             Whether you need AI training for your team, guidance on where to start, or help
             implementing and automating workflows — we're happy to hear from you.
@@ -96,7 +96,7 @@ export function Contact() {
               />
             </div>
             <Button type="submit" variant="primary" size="lg" className="w-full">
-              Let's connect
+              Send Message
             </Button>
           </form>
         </div>

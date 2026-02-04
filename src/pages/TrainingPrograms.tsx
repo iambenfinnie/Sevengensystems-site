@@ -94,7 +94,7 @@ export function TrainingPrograms() {
           <div className="mt-6">
             <Link to="/contact">
               <Button variant="primary" size="md">
-                Join training waitlist
+                Join Training Waitlist
               </Button>
             </Link>
           </div>
