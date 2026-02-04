@@ -69,7 +69,7 @@ export function About() {
               <img
                 src="/team/rob-maclean.jpg"
                 alt="Robert Maclean, CEO of Seven Gen Systems"
-                className="w-36 h-36 rounded-lg object-cover flex-shrink-0"
+                className="w-36 h-36 rounded-lg object-cover object-[center_20%] flex-shrink-0"
               />
               <div>
                 <h3 className="text-base font-medium text-gray-900">Robert Maclean</h3>
