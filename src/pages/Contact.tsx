@@ -38,8 +38,8 @@ export function Contact() {
           <div className="mt-6 p-4 bg-gray-50 rounded-lg border border-gray-200">
             <p className="text-sm text-gray-700">
               <strong>Email:</strong>{' '}
-              <a href="mailto:ben@sevengensystems.com" className="text-blue-700 underline">
-                ben@sevengensystems.com
+              <a href="mailto:contact@sevengensystems.com" className="text-blue-700 underline">
+                contact@sevengensystems.com
               </a>
             </p>
           </div>
