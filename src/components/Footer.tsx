@@ -24,7 +24,7 @@ export function Footer() {
           </div>
           <div>
             <h3 className="text-sm font-semibold text-gray-300 tracking-wide">Contact</h3>
-            <p className="mt-2 text-sm text-gray-400">info@sevengensystems.com</p>
+            <p className="mt-2 text-sm text-gray-400">ben@sevengensystems.com</p>
             <div className="mt-4">
               <Link
                 to="/contact"
