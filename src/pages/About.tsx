@@ -64,12 +64,6 @@ export function About() {
       <section className="bg-gray-50 border-t border-gray-200">
         <div className="mx-auto max-w-3xl px-4 py-12 sm:px-6 lg:px-8">
           <h2 className="text-xl font-semibold text-gray-900">Founders</h2>
-
-<p className="mt-3 text-sm text-gray-600">
-  Seven Gen Systems is Indigenous-owned and grounded in Seven Generations thinking — building practical systems that last.
-  We prioritize sustainability, trust, accountability, and responsible AI adoption that creates measurable outcomes.
-</p>
-
           <div className="mt-6 space-y-8">
             <div className="flex flex-col sm:flex-row gap-6">
               <img
