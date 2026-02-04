@@ -23,8 +23,8 @@ export function Contact() {
         <div className="mx-auto max-w-3xl px-4 py-16 sm:px-6 lg:px-8">
           <h1 className="text-3xl font-bold tracking-tight text-gray-900">Let's connect</h1>
           <p className="mt-3 text-gray-600">
-            Whether you're exploring AI for your organization, interested in training, or just want
-            to learn more about what we do — we're happy to hear from you.
+            Whether you need AI training for your team, guidance on where to start, or help
+            implementing and automating workflows — we're happy to hear from you.
           </p>
 
           <div className="mt-6 p-4 bg-gray-50 rounded-lg border border-gray-200">
