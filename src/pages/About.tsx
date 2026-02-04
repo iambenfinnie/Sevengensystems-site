@@ -72,19 +72,31 @@ export function About() {
         </div>
       </section>
 
-      {/* Founder */}
+      {/* Leadership */}
       <section className="bg-gray-50 border-t border-gray-200">
         <div className="mx-auto max-w-3xl px-4 py-12 sm:px-6 lg:px-8">
-          <h2 className="text-xl font-semibold text-gray-900">Founder</h2>
-          {/* PLACEHOLDER: Replace with founder name, bio, and photo */}
-          <p className="mt-2 text-sm text-gray-600">
-            Seven Gen Systems was founded to bridge the gap between AI technology and the organizations
-            that stand to benefit most from it — particularly Indigenous and community-based organizations
-            that are often underserved by the technology sector.
-          </p>
-          <p className="mt-2 text-sm text-gray-500 italic">
-            Founder bio and photo to be added.
-          </p>
+          <h2 className="text-xl font-semibold text-gray-900">Leadership</h2>
+          <div className="mt-6 flex flex-col sm:flex-row gap-6">
+            <img
+              src="/team/rob-maclean.jpg"
+              alt="Robert Maclean, CEO of Seven Gen Systems"
+              className="w-36 h-36 rounded-lg object-cover flex-shrink-0"
+            />
+            <div>
+              <h3 className="text-base font-medium text-gray-900">Robert Maclean</h3>
+              <p className="text-sm text-gray-500">CEO</p>
+              <p className="mt-3 text-sm text-gray-600">
+                Robert Maclean is the CEO of Seven Gen Systems, leading the company's focus on practical AI
+                training and automation for organizations that want real results — not hype.
+              </p>
+              <p className="mt-2 text-sm text-gray-600">
+                He brings a systems-first mindset to AI adoption, emphasizing simple, reliable implementations
+                that reduce manual work, improve operations, and deliver measurable value. Robert is committed
+                to building responsible, long-term solutions grounded in Indigenous principles of sustainability,
+                trust, and accountability.
+              </p>
+            </div>
+          </div>
         </div>
       </section>
 
