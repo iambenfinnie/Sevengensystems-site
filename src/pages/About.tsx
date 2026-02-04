@@ -77,6 +77,12 @@ export function About() {
       <section className="bg-gray-50 border-t border-gray-200">
         <div className="mx-auto max-w-3xl px-4 py-12 sm:px-6 lg:px-8">
           <h2 className="text-xl font-semibold text-gray-900">Founders</h2>
+          <p className="mt-3 text-sm text-gray-600">
+            Guided by the Seven Generations principle, we focus on building systems meant to
+            last — designed for long-term impact, not short-term hype. As an Indigenous-owned
+            company, that way of thinking shows up in how we work, how we treat the people we
+            partner with, and the care we take in the communities connected to what we build.
+          </p>
           <div className="mt-6 space-y-8">
             <div className="flex flex-col sm:flex-row gap-6">
               <img
