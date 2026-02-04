@@ -16,11 +16,10 @@ export function Footer() {
           <div>
             <h3 className="text-sm font-semibold text-gray-300 tracking-wide">Pages</h3>
             <ul className="mt-2 space-y-1">
-              <li><Link to="/who-we-work-with" className="text-sm text-gray-400 hover:text-white">Who We Work With</Link></li>
-              <li><Link to="/training-programs" className="text-sm text-gray-400 hover:text-white">Training Programs</Link></li>
-              <li><Link to="/operational-ai" className="text-sm text-gray-400 hover:text-white">Operational AI</Link></li>
+              <li><Link to="/training-programs" className="text-sm text-gray-400 hover:text-white">Training</Link></li>
+              <li><Link to="/operational-ai" className="text-sm text-gray-400 hover:text-white">AI Operations</Link></li>
               <li><Link to="/about" className="text-sm text-gray-400 hover:text-white">About Us</Link></li>
-              <li><Link to="/contact" className="text-sm text-gray-400 hover:text-white">Contact</Link></li>
+              <li><Link to="/contact" className="text-sm text-gray-400 hover:text-white">Get Started</Link></li>
             </ul>
           </div>
           <div>
@@ -31,7 +30,7 @@ export function Footer() {
                 to="/contact"
                 className="text-sm text-gray-300 underline hover:text-white"
               >
-                Let's connect →
+                Get Started →
               </Link>
             </div>
           </div>

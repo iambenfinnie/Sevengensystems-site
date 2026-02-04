@@ -136,7 +136,7 @@ export function OperationalAI() {
           <div className="mt-6">
             <Link to="/contact">
               <Button variant="primary" size="md">
-                Book a strategy call
+                Book a Strategy Call
               </Button>
             </Link>
           </div>

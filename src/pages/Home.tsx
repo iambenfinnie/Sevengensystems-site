@@ -11,14 +11,19 @@ export function Home() {
             Your organization wants to use AI — but where do you start?
           </h1>
           <p className="mt-4 text-lg text-gray-600">
-            Most organizations know AI matters but aren't sure what's practical, what's safe, or who to trust.
+            Most organizations know AI matters but are not sure what is practical, what is safe, or who to trust.
             Seven Gen Systems helps you move forward with training programs that build real skills and
             implementation services that embed AI into your actual operations.
           </p>
-          <div className="mt-8">
+          <div className="mt-8 flex flex-col sm:flex-row gap-3 justify-center">
             <Link to="/contact">
               <Button variant="primary" size="lg">
-                Let's connect
+                Book a Strategy Call
+              </Button>
+            </Link>
+            <Link to="/training-programs">
+              <Button variant="secondary" size="lg">
+                Join Training Waitlist
               </Button>
             </Link>
           </div>
@@ -65,25 +70,61 @@ export function Home() {
                 embedded enablement. Your team learns skills they can use the next day.
               </p>
               <Link to="/training-programs" className="mt-3 inline-block text-sm text-blue-700 underline hover:text-blue-900">
-                View training programs →
+                View training programs
               </Link>
             </div>
             <div className="border border-gray-200 rounded-lg p-5">
-              <h3 className="text-sm font-medium text-gray-900">Operational AI</h3>
+              <h3 className="text-sm font-medium text-gray-900">AI Operations</h3>
               <p className="mt-2 text-sm text-gray-600">
                 We identify where AI fits into your existing workflows and build reliable systems
                 that reduce manual work — scoped tightly, with clear success criteria.
               </p>
               <Link to="/operational-ai" className="mt-3 inline-block text-sm text-blue-700 underline hover:text-blue-900">
-                Learn about implementation →
+                Learn about implementation
               </Link>
             </div>
           </div>
         </div>
       </section>
 
-      {/* How we work */}
+      {/* Who We Work With — inline section */}
       <section className="bg-gray-50 border-t border-gray-200">
+        <div className="mx-auto max-w-3xl px-4 py-16 sm:px-6 lg:px-8">
+          <h2 className="text-xl font-semibold text-gray-900">Who we work with</h2>
+          <p className="mt-2 text-sm text-gray-600">
+            We work with organizations that operate under real constraints — limited budgets, public accountability,
+            sensitive data, and communities that deserve careful, respectful approaches to technology adoption.
+          </p>
+          <div className="mt-6 grid gap-6 sm:grid-cols-2">
+            {[
+              {
+                name: 'Indigenous organizations and band councils',
+                desc: 'Managing community programs, economic development, and essential services with respect for data sovereignty and existing governance structures.',
+              },
+              {
+                name: 'Nonprofits and community organizations',
+                desc: 'Mission-driven organizations that run lean, report to funders, and need to demonstrate measurable outcomes without open-ended technology projects.',
+              },
+              {
+                name: 'Government departments and agencies',
+                desc: 'Public-sector teams responsible for program delivery, workforce development, or digital modernization with clear scope and accountability requirements.',
+              },
+              {
+                name: 'Small and medium-sized businesses',
+                desc: 'Businesses with operational bottlenecks that want practical AI adoption — not a research project — working with their existing team and systems.',
+              },
+            ].map((org) => (
+              <div key={org.name}>
+                <h3 className="text-sm font-medium text-gray-900">{org.name}</h3>
+                <p className="mt-1 text-sm text-gray-600">{org.desc}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* How we work */}
+      <section className="bg-white border-t border-gray-200">
         <div className="mx-auto max-w-3xl px-4 py-16 sm:px-6 lg:px-8">
           <h2 className="text-xl font-semibold text-gray-900">How we work</h2>
           <p className="mt-2 text-sm text-gray-600">
@@ -106,16 +147,21 @@ export function Home() {
       </section>
 
       {/* Bottom CTA */}
-      <section className="bg-white border-t border-gray-200">
+      <section className="bg-gray-50 border-t border-gray-200">
         <div className="mx-auto max-w-3xl px-4 py-16 sm:px-6 lg:px-8 text-center">
           <h2 className="text-xl font-semibold text-gray-900">Not sure where to start?</h2>
           <p className="mt-2 text-sm text-gray-600">
-            That's normal. We're happy to talk through what might make sense for your organization — no obligation.
+            That is normal. We are happy to talk through what might make sense for your organization — no obligation.
           </p>
-          <div className="mt-6">
+          <div className="mt-6 flex flex-col sm:flex-row gap-3 justify-center">
             <Link to="/contact">
               <Button variant="primary" size="md">
-                Let's connect
+                Book a Strategy Call
+              </Button>
+            </Link>
+            <Link to="/training-programs">
+              <Button variant="secondary" size="md">
+                Join Training Waitlist
               </Button>
             </Link>
           </div>

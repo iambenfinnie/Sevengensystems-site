@@ -1,7 +1,6 @@
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import { Layout } from '@/components/Layout'
 import { Home } from '@/pages/Home'
-import { WhoWeWorkWith } from '@/pages/WhoWeWorkWith'
 import { TrainingPrograms } from '@/pages/TrainingPrograms'
 import { OperationalAI } from '@/pages/OperationalAI'
 import { About } from '@/pages/About'
@@ -13,7 +12,6 @@ function App() {
       <Routes>
         <Route path="/" element={<Layout />}>
           <Route index element={<Home />} />
-          <Route path="who-we-work-with" element={<WhoWeWorkWith />} />
           <Route path="training-programs" element={<TrainingPrograms />} />
           <Route path="operational-ai" element={<OperationalAI />} />
           <Route path="about" element={<About />} />

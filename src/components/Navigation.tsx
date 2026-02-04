@@ -3,11 +3,10 @@ import { Link } from 'react-router-dom'
 
 const navLinks = [
   { to: '/', label: 'Home' },
-  { to: '/who-we-work-with', label: 'Who We Work With' },
-  { to: '/training-programs', label: 'Training Programs' },
-  { to: '/operational-ai', label: 'Operational AI' },
+  { to: '/training-programs', label: 'Training' },
+  { to: '/operational-ai', label: 'AI Operations' },
   { to: '/about', label: 'About Us' },
-  { to: '/contact', label: 'Contact' },
+  { to: '/contact', label: 'Get Started' },
 ]
 
 export function Navigation() {
@@ -34,7 +33,7 @@ export function Navigation() {
               to="/contact"
               className="ml-2 inline-flex items-center px-4 py-2 text-sm font-medium rounded-md bg-gray-900 text-white hover:bg-gray-800 transition-colors"
             >
-              Let's connect
+              Get Started
             </Link>
           </div>
           <button
@@ -71,7 +70,7 @@ export function Navigation() {
               onClick={() => setMobileOpen(false)}
               className="block mt-2 px-3 py-2 text-sm font-medium text-center rounded-md bg-gray-900 text-white hover:bg-gray-800"
             >
-              Let's connect
+              Get Started
             </Link>
           </div>
         </div>

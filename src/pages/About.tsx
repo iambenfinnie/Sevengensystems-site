@@ -27,8 +27,21 @@ export function About() {
         </div>
       </section>
 
-      {/* How we operate */}
+      {/* Values */}
       <section className="bg-white border-t border-gray-200">
+        <div className="mx-auto max-w-3xl px-4 py-12 sm:px-6 lg:px-8">
+          <h2 className="text-xl font-semibold text-gray-900">What we value</h2>
+          <p className="mt-3 text-sm text-gray-600">
+            We believe technology should strengthen communities, not create dependency. Every system
+            we build is designed to be understood, maintained, and owned by the people who use it.
+            We are honest about what AI can and cannot do, we scope conservatively, and we measure
+            success by the lasting capability we leave behind — not by the size of the engagement.
+          </p>
+        </div>
+      </section>
+
+      {/* How we operate */}
+      <section className="bg-gray-50 border-t border-gray-200">
         <div className="mx-auto max-w-3xl px-4 py-12 sm:px-6 lg:px-8">
           <h2 className="text-xl font-semibold text-gray-900">How we operate</h2>
           <div className="mt-6 space-y-4">
@@ -63,7 +76,7 @@ export function About() {
       {/* Leadership */}
       <section className="bg-gray-50 border-t border-gray-200">
         <div className="mx-auto max-w-3xl px-4 py-12 sm:px-6 lg:px-8">
-          <h2 className="text-xl font-semibold text-gray-900">Leadership</h2>
+          <h2 className="text-xl font-semibold text-gray-900">Founders</h2>
           <div className="mt-6 space-y-8">
             <div className="flex flex-col sm:flex-row gap-6">
               <img
@@ -118,7 +131,7 @@ export function About() {
           <div className="mt-4">
             <Link to="/contact">
               <Button variant="primary" size="md">
-                Let's connect
+                Book a Strategy Call
               </Button>
             </Link>
           </div>
