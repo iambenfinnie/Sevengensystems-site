@@ -1,76 +1,131 @@
 import { useState, FormEvent } from 'react'
 import { Button } from '@/components/ui/button'
 
+const inquiryTypes = [
+  { value: 'partner', label: 'Partner / Funder Inquiry' },
+  { value: 'call', label: 'Book a Call' },
+  { value: 'waitlist', label: 'Join Waitlist / Newsletter' },
+  { value: 'general', label: 'General Question' },
+]
+
 export function Contact() {
   const [formData, setFormData] = useState({
     name: '',
     email: '',
+    organization: '',
+    type: '',
     message: '',
   })
 
   const handleSubmit = (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault()
     console.log('Form submitted:', formData)
-    alert('Thank you for your message!')
-    setFormData({ name: '', email: '', message: '' })
+    alert('Thank you for your message. We will be in touch.')
+    setFormData({ name: '', email: '', organization: '', type: '', message: '' })
   }
 
   return (
-    <div className="bg-white py-24">
-      <div className="mx-auto max-w-3xl px-4 sm:px-6 lg:px-8">
-        <div className="text-center">
-          <h1 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
-            Contact Us
-          </h1>
-          <p className="mt-4 text-lg text-gray-500">
-            Have a question? Send us a message!
+    <div>
+      <section className="bg-white">
+        <div className="mx-auto max-w-3xl px-4 py-16 sm:px-6 lg:px-8">
+          <h1 className="text-3xl font-bold tracking-tight text-gray-900">Contact</h1>
+          <p className="mt-3 text-gray-600">
+            Whether you are a funder, a potential partner, or an organization exploring AI —
+            we are happy to hear from you.
           </p>
+
+          {/* Direct contact */}
+          <div className="mt-6 p-4 bg-gray-50 rounded-lg border border-gray-200">
+            <p className="text-sm text-gray-700">
+              <strong>Email:</strong>{' '}
+              <a href="mailto:info@sevengensystems.com" className="text-blue-700 underline">
+                info@sevengensystems.com
+              </a>
+            </p>
+          </div>
         </div>
-        <form onSubmit={handleSubmit} className="mt-12 space-y-6">
-          <div>
-            <label htmlFor="name" className="block text-sm font-medium text-gray-700">
-              Name
-            </label>
-            <input
-              type="text"
-              id="name"
-              required
-              value={formData.name}
-              onChange={(e) => setFormData({ ...formData, name: e.target.value })}
-              className="mt-1 block w-full rounded-md border border-gray-300 px-3 py-2 shadow-sm focus:border-blue-500 focus:outline-none focus:ring-1 focus:ring-blue-500"
-            />
-          </div>
-          <div>
-            <label htmlFor="email" className="block text-sm font-medium text-gray-700">
-              Email
-            </label>
-            <input
-              type="email"
-              id="email"
-              required
-              value={formData.email}
-              onChange={(e) => setFormData({ ...formData, email: e.target.value })}
-              className="mt-1 block w-full rounded-md border border-gray-300 px-3 py-2 shadow-sm focus:border-blue-500 focus:outline-none focus:ring-1 focus:ring-blue-500"
-            />
-          </div>
-          <div>
-            <label htmlFor="message" className="block text-sm font-medium text-gray-700">
-              Message
-            </label>
-            <textarea
-              id="message"
-              rows={4}
-              required
-              value={formData.message}
-              onChange={(e) => setFormData({ ...formData, message: e.target.value })}
-              className="mt-1 block w-full rounded-md border border-gray-300 px-3 py-2 shadow-sm focus:border-blue-500 focus:outline-none focus:ring-1 focus:ring-blue-500"
-            />
-          </div>
-          <Button type="submit" variant="primary" size="lg" className="w-full">
-            Send Message
-          </Button>
-        </form>
-      </div>
+      </section>
+
+      <section className="bg-gray-50 border-t border-gray-200">
+        <div className="mx-auto max-w-3xl px-4 py-12 sm:px-6 lg:px-8">
+          <h2 className="text-xl font-semibold text-gray-900">Send a message</h2>
+          <form onSubmit={handleSubmit} className="mt-6 space-y-5">
+            <div className="grid gap-5 sm:grid-cols-2">
+              <div>
+                <label htmlFor="name" className="block text-sm font-medium text-gray-700">
+                  Name
+                </label>
+                <input
+                  type="text"
+                  id="name"
+                  required
+                  value={formData.name}
+                  onChange={(e) => setFormData({ ...formData, name: e.target.value })}
+                  className="mt-1 block w-full rounded-md border border-gray-300 px-3 py-2 text-sm shadow-sm focus:border-gray-500 focus:outline-none focus:ring-1 focus:ring-gray-500"
+                />
+              </div>
+              <div>
+                <label htmlFor="email" className="block text-sm font-medium text-gray-700">
+                  Email
+                </label>
+                <input
+                  type="email"
+                  id="email"
+                  required
+                  value={formData.email}
+                  onChange={(e) => setFormData({ ...formData, email: e.target.value })}
+                  className="mt-1 block w-full rounded-md border border-gray-300 px-3 py-2 text-sm shadow-sm focus:border-gray-500 focus:outline-none focus:ring-1 focus:ring-gray-500"
+                />
+              </div>
+            </div>
+            <div>
+              <label htmlFor="organization" className="block text-sm font-medium text-gray-700">
+                Organization (optional)
+              </label>
+              <input
+                type="text"
+                id="organization"
+                value={formData.organization}
+                onChange={(e) => setFormData({ ...formData, organization: e.target.value })}
+                className="mt-1 block w-full rounded-md border border-gray-300 px-3 py-2 text-sm shadow-sm focus:border-gray-500 focus:outline-none focus:ring-1 focus:ring-gray-500"
+              />
+            </div>
+            <div>
+              <label htmlFor="type" className="block text-sm font-medium text-gray-700">
+                What brings you here?
+              </label>
+              <select
+                id="type"
+                required
+                value={formData.type}
+                onChange={(e) => setFormData({ ...formData, type: e.target.value })}
+                className="mt-1 block w-full rounded-md border border-gray-300 px-3 py-2 text-sm shadow-sm focus:border-gray-500 focus:outline-none focus:ring-1 focus:ring-gray-500"
+              >
+                <option value="">Select one</option>
+                {inquiryTypes.map((t) => (
+                  <option key={t.value} value={t.value}>{t.label}</option>
+                ))}
+              </select>
+            </div>
+            <div>
+              <label htmlFor="message" className="block text-sm font-medium text-gray-700">
+                Message
+              </label>
+              <textarea
+                id="message"
+                rows={4}
+                required
+                value={formData.message}
+                onChange={(e) => setFormData({ ...formData, message: e.target.value })}
+                className="mt-1 block w-full rounded-md border border-gray-300 px-3 py-2 text-sm shadow-sm focus:border-gray-500 focus:outline-none focus:ring-1 focus:ring-gray-500"
+              />
+            </div>
+            <Button type="submit" variant="primary" size="lg" className="w-full">
+              Send Message
+            </Button>
+          </form>
+        </div>
+      </section>
     </div>
   )
 }

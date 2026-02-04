@@ -1,43 +1,80 @@
+import { useState } from 'react'
 import { Link } from 'react-router-dom'
 
+const navLinks = [
+  { to: '/', label: 'Home' },
+  { to: '/programs', label: 'Programs' },
+  { to: '/partners', label: 'Partners & Funders' },
+  { to: '/about', label: 'About' },
+  { to: '/contact', label: 'Contact' },
+]
+
 export function Navigation() {
+  const [mobileOpen, setMobileOpen] = useState(false)
+
   return (
-    <nav className="bg-white shadow-sm">
-      <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+    <nav className="bg-white border-b border-gray-200">
+      <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
         <div className="flex h-16 justify-between items-center">
-          <div className="flex-shrink-0">
-            <Link to="/" className="text-xl font-bold text-gray-900">
-              Marketing Site
-            </Link>
-          </div>
-          <div className="hidden sm:ml-6 sm:flex sm:space-x-8">
-            <Link
-              to="/"
-              className="inline-flex items-center px-1 pt-1 text-sm font-medium text-gray-900 hover:text-gray-600"
-            >
-              Home
-            </Link>
-            <Link
-              to="/services"
-              className="inline-flex items-center px-1 pt-1 text-sm font-medium text-gray-500 hover:text-gray-900"
-            >
-              Services
-            </Link>
-            <Link
-              to="/about"
-              className="inline-flex items-center px-1 pt-1 text-sm font-medium text-gray-500 hover:text-gray-900"
-            >
-              About
-            </Link>
+          <Link to="/" className="text-lg font-semibold text-gray-900 tracking-tight">
+            Seven Gen Systems
+          </Link>
+          <div className="hidden md:flex md:items-center md:space-x-6">
+            {navLinks.map((link) => (
+              <Link
+                key={link.to}
+                to={link.to}
+                className="text-sm font-medium text-gray-600 hover:text-gray-900 transition-colors"
+              >
+                {link.label}
+              </Link>
+            ))}
             <Link
               to="/contact"
-              className="inline-flex items-center px-1 pt-1 text-sm font-medium text-gray-500 hover:text-gray-900"
+              className="ml-2 inline-flex items-center px-4 py-2 text-sm font-medium rounded-md bg-gray-900 text-white hover:bg-gray-800 transition-colors"
             >
-              Contact
+              Get in Touch
+            </Link>
+          </div>
+          <button
+            type="button"
+            onClick={() => setMobileOpen(!mobileOpen)}
+            className="md:hidden inline-flex items-center justify-center p-2 rounded-md text-gray-600 hover:text-gray-900"
+            aria-label="Toggle menu"
+          >
+            <svg className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              {mobileOpen ? (
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+              ) : (
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
+              )}
+            </svg>
+          </button>
+        </div>
+      </div>
+      {mobileOpen && (
+        <div className="md:hidden border-t border-gray-200">
+          <div className="px-4 py-3 space-y-1">
+            {navLinks.map((link) => (
+              <Link
+                key={link.to}
+                to={link.to}
+                onClick={() => setMobileOpen(false)}
+                className="block px-3 py-2 text-sm font-medium text-gray-600 hover:text-gray-900 hover:bg-gray-50 rounded-md"
+              >
+                {link.label}
+              </Link>
+            ))}
+            <Link
+              to="/contact"
+              onClick={() => setMobileOpen(false)}
+              className="block mt-2 px-3 py-2 text-sm font-medium text-center rounded-md bg-gray-900 text-white hover:bg-gray-800"
+            >
+              Get in Touch
             </Link>
           </div>
         </div>
-      </div>
+      )}
     </nav>
   )
 }
