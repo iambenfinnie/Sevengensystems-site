@@ -3,9 +3,10 @@ import { Link } from 'react-router-dom'
 
 const navLinks = [
   { to: '/', label: 'Home' },
-  { to: '/programs', label: 'Programs' },
-  { to: '/partners', label: 'Partners & Funders' },
-  { to: '/about', label: 'About' },
+  { to: '/who-we-work-with', label: 'Who We Work With' },
+  { to: '/training-programs', label: 'Training Programs' },
+  { to: '/operational-ai', label: 'Operational AI' },
+  { to: '/about', label: 'About Us' },
   { to: '/contact', label: 'Contact' },
 ]
 
@@ -33,7 +34,7 @@ export function Navigation() {
               to="/contact"
               className="ml-2 inline-flex items-center px-4 py-2 text-sm font-medium rounded-md bg-gray-900 text-white hover:bg-gray-800 transition-colors"
             >
-              Get in Touch
+              Let's connect
             </Link>
           </div>
           <button
@@ -70,7 +71,7 @@ export function Navigation() {
               onClick={() => setMobileOpen(false)}
               className="block mt-2 px-3 py-2 text-sm font-medium text-center rounded-md bg-gray-900 text-white hover:bg-gray-800"
             >
-              Get in Touch
+              Let's connect
             </Link>
           </div>
         </div>
