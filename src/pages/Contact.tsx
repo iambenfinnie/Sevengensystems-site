@@ -1,40 +1,32 @@
 import { useState, FormEvent } from 'react'
 import { Button } from '@/components/ui/button'
 
-const inquiryTypes = [
-  { value: 'partner', label: 'Partner / Funder Inquiry' },
-  { value: 'call', label: 'Book a Call' },
-  { value: 'waitlist', label: 'Join Waitlist / Newsletter' },
-  { value: 'general', label: 'General Question' },
-]
-
 export function Contact() {
   const [formData, setFormData] = useState({
     name: '',
     email: '',
     organization: '',
-    type: '',
     message: '',
   })
 
   const handleSubmit = (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault()
+    // Form submission not wired yet
     console.log('Form submitted:', formData)
-    alert('Thank you for your message. We will be in touch.')
-    setFormData({ name: '', email: '', organization: '', type: '', message: '' })
+    alert('Thank you for reaching out. We will be in touch.')
+    setFormData({ name: '', email: '', organization: '', message: '' })
   }
 
   return (
     <div>
       <section className="bg-white">
         <div className="mx-auto max-w-3xl px-4 py-16 sm:px-6 lg:px-8">
-          <h1 className="text-3xl font-bold tracking-tight text-gray-900">Contact</h1>
+          <h1 className="text-3xl font-bold tracking-tight text-gray-900">Let's connect</h1>
           <p className="mt-3 text-gray-600">
-            Whether you are a funder, a potential partner, or an organization exploring AI —
-            we are happy to hear from you.
+            Whether you're exploring AI for your organization, interested in training, or just want
+            to learn more about what we do — we're happy to hear from you.
           </p>
 
-          {/* Direct contact */}
           <div className="mt-6 p-4 bg-gray-50 rounded-lg border border-gray-200">
             <p className="text-sm text-gray-700">
               <strong>Email:</strong>{' '}
@@ -91,23 +83,6 @@ export function Contact() {
               />
             </div>
             <div>
-              <label htmlFor="type" className="block text-sm font-medium text-gray-700">
-                What brings you here?
-              </label>
-              <select
-                id="type"
-                required
-                value={formData.type}
-                onChange={(e) => setFormData({ ...formData, type: e.target.value })}
-                className="mt-1 block w-full rounded-md border border-gray-300 px-3 py-2 text-sm shadow-sm focus:border-gray-500 focus:outline-none focus:ring-1 focus:ring-gray-500"
-              >
-                <option value="">Select one</option>
-                {inquiryTypes.map((t) => (
-                  <option key={t.value} value={t.value}>{t.label}</option>
-                ))}
-              </select>
-            </div>
-            <div>
               <label htmlFor="message" className="block text-sm font-medium text-gray-700">
                 Message
               </label>
@@ -121,7 +96,7 @@ export function Contact() {
               />
             </div>
             <Button type="submit" variant="primary" size="lg" className="w-full">
-              Send Message
+              Let's connect
             </Button>
           </form>
         </div>

@@ -1,8 +1,9 @@
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import { Layout } from '@/components/Layout'
 import { Home } from '@/pages/Home'
-import { Programs } from '@/pages/Programs'
-import { Partners } from '@/pages/Partners'
+import { WhoWeWorkWith } from '@/pages/WhoWeWorkWith'
+import { TrainingPrograms } from '@/pages/TrainingPrograms'
+import { OperationalAI } from '@/pages/OperationalAI'
 import { About } from '@/pages/About'
 import { Contact } from '@/pages/Contact'
 
@@ -12,8 +13,9 @@ function App() {
       <Routes>
         <Route path="/" element={<Layout />}>
           <Route index element={<Home />} />
-          <Route path="programs" element={<Programs />} />
-          <Route path="partners" element={<Partners />} />
+          <Route path="who-we-work-with" element={<WhoWeWorkWith />} />
+          <Route path="training-programs" element={<TrainingPrograms />} />
+          <Route path="operational-ai" element={<OperationalAI />} />
           <Route path="about" element={<About />} />
           <Route path="contact" element={<Contact />} />
         </Route>
