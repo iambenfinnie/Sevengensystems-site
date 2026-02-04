@@ -6,7 +6,7 @@ export function OperationalAI() {
     <div>
       <section className="bg-white">
         <div className="mx-auto max-w-3xl px-4 py-16 sm:px-6 lg:px-8">
-          <h1 className="text-3xl font-bold tracking-tight text-gray-900">Operational AI</h1>
+          <h1 className="text-3xl font-bold tracking-tight text-gray-900">AI Operations</h1>
           <p className="mt-4 text-gray-600">
             Operational AI means embedding artificial intelligence into the workflows your team already
             uses — not as a standalone project, but as a practical layer that reduces manual work,
