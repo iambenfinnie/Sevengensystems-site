@@ -75,14 +75,10 @@ export function About() {
                 <h3 className="text-base font-medium text-gray-900">Robert Maclean</h3>
                 <p className="text-sm text-gray-500">CEO</p>
                 <p className="mt-3 text-sm text-gray-600">
-                  Robert Maclean is the CEO of Seven Gen Systems, leading the company's focus on practical AI
-                  training and automation for organizations that want real results — not hype.
+                  Robert Maclean leads Seven Gen Systems with a simple goal: helping organizations use AI to make their work easier and more effective. He focuses on practical systems that reduce busywork, strengthen operations, and deliver results teams can count on.
                 </p>
                 <p className="mt-2 text-sm text-gray-600">
-                  He brings a systems-first mindset to AI adoption, emphasizing simple, reliable implementations
-                  that reduce manual work, improve operations, and deliver measurable value. Robert is committed
-                  to building responsible, long-term solutions grounded in Indigenous principles of sustainability,
-                  trust, and accountability.
+                  He believes technology should create real opportunity, not complexity, and works to make AI more accessible, responsible, and useful — especially for communities often left out of new technologies. His approach is grounded in long-term thinking, trust, and accountability.
                 </p>
               </div>
             </div>
@@ -90,20 +86,16 @@ export function About() {
               <img
                 src="/team/ben-finnie.jpg"
                 alt="Ben Finnie, Head of Systems & Automation at Seven Gen Systems"
-                className="w-36 h-36 rounded-lg object-cover flex-shrink-0"
+                className="w-36 h-36 rounded-lg object-cover object-[center_35%] flex-shrink-0"
               />
               <div>
                 <h3 className="text-base font-medium text-gray-900">Ben Finnie</h3>
                 <p className="text-sm text-gray-500">Head of Systems & Automation</p>
                 <p className="mt-3 text-sm text-gray-600">
-                  Ben Finnie is the Head of Systems & Automation at Seven Gen Systems, responsible for the
-                  technical design and implementation of the company's AI-driven workflows and internal systems.
+                  Ben Finnie leads systems and automation at Seven Gen Systems, designing and implementing AI workflows that solve real operational problems — not experimental or hype-driven use cases.
                 </p>
                 <p className="mt-2 text-sm text-gray-600">
-                  He focuses on turning real operational needs into reliable, maintainable automations —
-                  prioritizing clarity, stability, and measurable impact over experimental or hype-driven tools.
-                  Ben works closely with delivery teams and clients to ensure systems integrate smoothly into
-                  existing operations and perform consistently in real-world environments.
+                  His focus is on building clear, reliable automations that teams can understand, maintain, and trust over time.
                 </p>
               </div>
             </div>
