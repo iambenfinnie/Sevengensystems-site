@@ -16,7 +16,7 @@ export default async function handler(req: VercelRequest, res: VercelResponse) {
 
   try {
     const { data, error } = await resend.emails.send({
-      from: 'Seven Gen Systems Contact <contact@send.sevengensystems.com>',
+      from: 'Seven Gen Systems Contact <contact@sevengensystems.com>',
       to: 'ben@sevengensystems.com',
       replyTo: email,
       subject: `New message from ${name}`,
