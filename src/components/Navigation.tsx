@@ -18,7 +18,7 @@ export function Navigation() {
       <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
         <div className="flex h-20 justify-between items-center">
           <Link to="/" className="flex items-center">
-            <Logo height={52} showTagline={false} />
+            <Logo height={68} showTagline={false} />
           </Link>
           <div className="hidden md:flex md:items-center md:space-x-6">
             {navLinks.map((link) => (
