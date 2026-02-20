@@ -15,9 +15,9 @@ export default async function handler(req: VercelRequest, res: VercelResponse) {
   }
 
   try {
-    await resend.emails.send({
-      from: 'Seven Gen Systems Contact <contact@send.sevengensystems.com>',
-      to: 'contact@sevengensystems.com',
+    const { data, error } = await resend.emails.send({
+      from: 'Seven Gen Systems Contact <contact@sevengensystems.com>',
+      to: 'ben@sevengensystems.com',
       replyTo: email,
       subject: `New message from ${name}`,
       html: `
@@ -30,7 +30,12 @@ export default async function handler(req: VercelRequest, res: VercelResponse) {
       `,
     })
 
-    return res.status(200).json({ success: true })
+    if (error) {
+      console.error('Resend error:', error)
+      return res.status(500).json({ error: 'Failed to send message. Please try again.' })
+    }
+
+    return res.status(200).json({ success: true, id: data?.id })
   } catch (error) {
     console.error('Email send error:', error)
     return res.status(500).json({ error: 'Failed to send message. Please try again.' })
