@@ -1,5 +1,6 @@
 import { useState } from 'react'
 import { Link } from 'react-router-dom'
+import { Logo } from './Logo'
 
 const navLinks = [
   { to: '/', label: 'Home' },
@@ -15,9 +16,9 @@ export function Navigation() {
   return (
     <nav className="bg-white border-b border-gray-200">
       <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
-        <div className="flex h-16 justify-between items-center">
-          <Link to="/" className="text-lg font-semibold text-gray-900 tracking-tight">
-            Seven Gen Systems
+        <div className="flex h-20 justify-between items-center">
+          <Link to="/" className="flex items-center">
+            <Logo height={52} showTagline={false} />
           </Link>
           <div className="hidden md:flex md:items-center md:space-x-6">
             {navLinks.map((link) => (
