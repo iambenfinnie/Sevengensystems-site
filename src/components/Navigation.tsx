@@ -16,9 +16,9 @@ export function Navigation() {
   return (
     <nav className="bg-white border-b border-gray-200">
       <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
-        <div className="flex h-20 justify-between items-center">
+        <div className="flex h-24 justify-between items-center">
           <Link to="/" className="flex items-center">
-            <Logo height={68} showTagline={false} />
+            <Logo height={88} showTagline={false} />
           </Link>
           <div className="hidden md:flex md:items-center md:space-x-6">
             {navLinks.map((link) => (
