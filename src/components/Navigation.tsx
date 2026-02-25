@@ -1,5 +1,6 @@
 import { useState } from 'react'
 import { Link } from 'react-router-dom'
+import { Logo } from './Logo'
 
 const navLinks = [
   { to: '/training-programs', label: 'Training' },
@@ -14,10 +15,11 @@ export function Navigation() {
     <nav className="bg-white border-b border-slate-200 sticky top-0 z-50">
       <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
         <div className="flex h-16 items-center justify-between">
-          {/* Logo mark + name */}
-          <Link to="/" className="flex items-center gap-2.5 flex-shrink-0">
-            <img src="/Seven Gen Leaf Favicon.png" alt="Seven Gen Systems" className="h-12 w-auto scale-125 origin-center" />
-            <span className="text-base font-bold text-slate-900 tracking-tight">Seven Gen Systems</span>
+          {/* Logo */}
+          <Link to="/" className="flex items-center flex-shrink-0">
+            <div style={{ height: '64px', width: '200px', overflow: 'hidden', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+              <Logo height={90} zoom={1.6} />
+            </div>
           </Link>
 
           {/* Center nav links */}
