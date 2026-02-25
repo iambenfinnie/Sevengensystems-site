@@ -14,16 +14,16 @@ export function Navigation() {
   return (
     <nav className="bg-white border-b border-slate-200 sticky top-0 z-50">
       <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
-        <div className="flex h-16 items-center justify-between">
+        <div className="flex h-16 items-center justify-between md:grid md:grid-cols-3">
           {/* Logo */}
           <Link to="/" className="flex items-center flex-shrink-0">
-            <div style={{ height: '64px', width: '200px', overflow: 'hidden', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
-              <Logo height={90} zoom={1.6} />
+            <div style={{ height: '56px', width: '180px', overflow: 'hidden', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+              <Logo height={80} zoom={1.3} />
             </div>
           </Link>
 
-          {/* Center nav links */}
-          <div className="hidden md:flex items-center space-x-8">
+          {/* Center nav links — truly centered via grid */}
+          <div className="hidden md:flex items-center justify-center space-x-8">
             {navLinks.map((link) => (
               <Link
                 key={link.to}
@@ -36,7 +36,7 @@ export function Navigation() {
           </div>
 
           {/* CTA button */}
-          <div className="hidden md:block">
+          <div className="hidden md:flex justify-end">
             <Link
               to="/contact"
               className="inline-flex items-center px-5 py-2 text-sm font-semibold rounded-lg bg-teal-600 text-white hover:bg-teal-500 transition-colors"
