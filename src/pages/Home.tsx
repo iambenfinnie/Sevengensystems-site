@@ -124,25 +124,6 @@ export function Home() {
         </div>
       </section>
 
-      {/* Case Study */}
-      <section className="bg-white">
-        <div className="mx-auto max-w-4xl px-4 py-24 sm:px-6 lg:px-8">
-          <div className="text-center mb-14">
-            <h2 className="text-3xl sm:text-4xl font-bold text-slate-900">Proof it works</h2>
-          </div>
-          <div className="rounded-2xl bg-slate-50 border border-slate-200 p-8 sm:p-12">
-            <div className="text-xs font-bold text-teal-600 uppercase tracking-widest">Case Study</div>
-            <h3 className="mt-3 text-2xl font-bold text-slate-900">Stanford Hearing Centre — AI Voice Agent</h3>
-            <p className="mt-5 text-slate-600 leading-relaxed">
-              Stanford Hearing Centre needed a smarter way to handle inbound patient inquiries. We built a custom AI voice agent that handles initial contact, qualifies patient needs, and routes calls automatically.
-            </p>
-            <p className="mt-4 text-slate-600 leading-relaxed">
-              The result: less time on routine calls, faster patient response, and a system their team actually uses every day.
-            </p>
-          </div>
-        </div>
-      </section>
-
       {/* Problem We Solve */}
       <section className="bg-slate-900 text-white">
         <div className="mx-auto max-w-3xl px-4 py-24 sm:px-6 lg:px-8 text-center">

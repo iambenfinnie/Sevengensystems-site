@@ -14,10 +14,10 @@ export function Navigation() {
   return (
     <nav className="bg-white border-b border-slate-200 sticky top-0 z-50">
       <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
-        <div className="flex h-16 items-center justify-between">
+        <div className="flex h-20 items-center justify-between">
           {/* Logo */}
           <Link to="/" className="flex items-center flex-shrink-0">
-            <Logo height={40} />
+            <Logo height={56} />
           </Link>
 
           {/* Center nav links */}
