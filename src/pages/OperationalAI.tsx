@@ -26,8 +26,16 @@ export function OperationalAI() {
               repetitive, manual, or error-prone tasks — and build targeted automations that help.
             </p>
           </div>
-          <div className="grid gap-6 sm:grid-cols-2">
+          <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
             {[
+              {
+                area: '24/7 AI Receptionist & Support',
+                desc: 'An AI agent that handles inbound calls, qualifies leads, answers common questions, and routes to the right person — around the clock, without staff overhead.',
+              },
+              {
+                area: 'Lead Follow-Up & Appointment Booking',
+                desc: 'Automatically follow up with new leads, nurture prospects over time, and book meetings directly into your calendar — without anyone lifting a finger.',
+              },
               {
                 area: 'Document processing and data entry',
                 desc: 'Extracting information from forms, reports, or emails and routing it to the right place — reducing manual input and copy-paste work.',
