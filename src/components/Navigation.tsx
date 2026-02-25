@@ -3,46 +3,51 @@ import { Link } from 'react-router-dom'
 import { Logo } from './Logo'
 
 const navLinks = [
-  { to: '/', label: 'Home' },
-  { to: '/training-programs', label: 'Training' },
+  { to: '/training-programs', label: 'Services' },
   { to: '/operational-ai', label: 'AI Operations' },
-  { to: '/about', label: 'About Us' },
-  { to: '/contact', label: 'Get Started' },
+  { to: '/about', label: 'About' },
 ]
 
 export function Navigation() {
   const [mobileOpen, setMobileOpen] = useState(false)
 
   return (
-    <nav className="bg-white border-b border-gray-200">
+    <nav className="bg-white border-b border-slate-200 sticky top-0 z-50">
       <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
-        <div className="flex h-36 justify-between items-center">
-          <Link to="/" className="flex items-center">
-            <div style={{ height: '119px', overflow: 'hidden', display: 'flex', alignItems: 'center' }}>
-              <Logo height={119} showTagline={false} zoom={1.25} />
-            </div>
+        <div className="flex h-16 items-center justify-between">
+          {/* Logo */}
+          <Link to="/" className="flex items-center flex-shrink-0">
+            <Logo height={40} />
           </Link>
-          <div className="hidden md:flex md:items-center md:space-x-6">
+
+          {/* Center nav links */}
+          <div className="hidden md:flex items-center space-x-8">
             {navLinks.map((link) => (
               <Link
                 key={link.to}
                 to={link.to}
-                className="text-sm font-medium text-gray-600 hover:text-gray-900 transition-colors"
+                className="text-sm font-medium text-slate-600 hover:text-slate-900 transition-colors"
               >
                 {link.label}
               </Link>
             ))}
+          </div>
+
+          {/* CTA button */}
+          <div className="hidden md:block">
             <Link
               to="/contact"
-              className="ml-2 inline-flex items-center px-4 py-2 text-sm font-medium rounded-md bg-gray-900 text-white hover:bg-gray-800 transition-colors"
+              className="inline-flex items-center px-5 py-2 text-sm font-semibold rounded-lg bg-teal-600 text-white hover:bg-teal-500 transition-colors"
             >
-              Get Started
+              Book a Call
             </Link>
           </div>
+
+          {/* Mobile hamburger */}
           <button
             type="button"
             onClick={() => setMobileOpen(!mobileOpen)}
-            className="md:hidden inline-flex items-center justify-center p-2 rounded-md text-gray-600 hover:text-gray-900"
+            className="md:hidden p-2 rounded-md text-slate-600 hover:text-slate-900"
             aria-label="Toggle menu"
           >
             <svg className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -55,15 +60,17 @@ export function Navigation() {
           </button>
         </div>
       </div>
+
+      {/* Mobile menu */}
       {mobileOpen && (
-        <div className="md:hidden border-t border-gray-200">
+        <div className="md:hidden border-t border-slate-200 bg-white">
           <div className="px-4 py-3 space-y-1">
             {navLinks.map((link) => (
               <Link
                 key={link.to}
                 to={link.to}
                 onClick={() => setMobileOpen(false)}
-                className="block px-3 py-2 text-sm font-medium text-gray-600 hover:text-gray-900 hover:bg-gray-50 rounded-md"
+                className="block px-3 py-2 text-sm font-medium text-slate-600 hover:text-slate-900 hover:bg-slate-50 rounded-md"
               >
                 {link.label}
               </Link>
@@ -71,9 +78,9 @@ export function Navigation() {
             <Link
               to="/contact"
               onClick={() => setMobileOpen(false)}
-              className="block mt-2 px-3 py-2 text-sm font-medium text-center rounded-md bg-gray-900 text-white hover:bg-gray-800"
+              className="block mt-2 px-3 py-2 text-sm font-semibold text-center rounded-lg bg-teal-600 text-white hover:bg-teal-500"
             >
-              Get Started
+              Book a Call
             </Link>
           </div>
         </div>

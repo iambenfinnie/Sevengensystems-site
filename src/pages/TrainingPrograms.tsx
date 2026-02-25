@@ -1,5 +1,4 @@
 import { Link } from 'react-router-dom'
-import { Button } from '@/components/ui/button'
 
 const tiers = [
   {
@@ -46,60 +45,71 @@ const tiers = [
 export function TrainingPrograms() {
   return (
     <div>
-      <section className="bg-white">
-        <div className="mx-auto max-w-3xl px-4 py-16 sm:px-6 lg:px-8">
-          <h1 className="text-3xl font-bold tracking-tight text-gray-900">Training Programs</h1>
-          <p className="mt-4 text-gray-600">
+
+      {/* Hero */}
+      <section className="bg-slate-900 text-white">
+        <div className="mx-auto max-w-5xl px-4 py-24 sm:px-6 lg:px-8">
+          <h1 className="text-4xl sm:text-5xl font-extrabold tracking-tight">Training Programs</h1>
+          <p className="mt-5 text-lg text-slate-300 max-w-2xl leading-relaxed">
             Three tiers of AI training, each building on the last. Start where it makes sense
             for your organization. Every tier is practical, role-relevant, and delivered at your pace.
           </p>
         </div>
       </section>
 
-      <section className="bg-gray-50 border-t border-gray-200">
-        <div className="mx-auto max-w-3xl px-4 py-12 sm:px-6 lg:px-8 space-y-10">
+      {/* Tiers */}
+      <section className="bg-slate-50">
+        <div className="mx-auto max-w-5xl px-4 py-24 sm:px-6 lg:px-8 space-y-8">
           {tiers.map((tier) => (
-            <div key={tier.name} className="bg-white border border-gray-200 rounded-lg p-6">
-              <p className="text-xs font-medium text-gray-500 uppercase tracking-wide">{tier.tag}</p>
-              <h2 className="mt-1 text-xl font-semibold text-gray-900">{tier.name}</h2>
-              <p className="mt-3 text-sm text-gray-600">{tier.description}</p>
-
-              <div className="mt-5">
-                <h3 className="text-sm font-medium text-gray-900">What's included</h3>
-                <ul className="mt-2 space-y-1">
-                  {tier.includes.map((item) => (
-                    <li key={item} className="flex items-start gap-2 text-sm text-gray-600">
-                      <span className="mt-0.5 text-gray-400">—</span>
-                      {item}
-                    </li>
-                  ))}
-                </ul>
+            <div key={tier.name} className="bg-white rounded-xl border border-slate-200 p-8 sm:p-10">
+              <div className="flex items-center gap-3 mb-4">
+                <span className="text-xs font-bold text-teal-600 uppercase tracking-widest">{tier.tag}</span>
               </div>
+              <h2 className="text-2xl font-bold text-slate-900">{tier.name}</h2>
+              <p className="mt-3 text-slate-600 leading-relaxed">{tier.description}</p>
 
-              <div className="mt-5">
-                <h3 className="text-sm font-medium text-gray-900">Who it's for</h3>
-                <p className="mt-1 text-sm text-gray-600">{tier.who}</p>
+              <div className="mt-8 grid sm:grid-cols-2 gap-8">
+                <div>
+                  <h3 className="text-sm font-semibold text-slate-900 uppercase tracking-wide">What's included</h3>
+                  <ul className="mt-4 space-y-3">
+                    {tier.includes.map((item) => (
+                      <li key={item} className="flex items-start gap-3 text-sm text-slate-600">
+                        <span className="mt-1 flex-shrink-0 w-4 h-4 rounded-full bg-teal-100 flex items-center justify-center">
+                          <span className="w-1.5 h-1.5 rounded-full bg-teal-600 block" />
+                        </span>
+                        {item}
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+                <div>
+                  <h3 className="text-sm font-semibold text-slate-900 uppercase tracking-wide">Who it's for</h3>
+                  <p className="mt-4 text-sm text-slate-600 leading-relaxed">{tier.who}</p>
+                </div>
               </div>
             </div>
           ))}
         </div>
       </section>
 
-      <section className="bg-white border-t border-gray-200">
-        <div className="mx-auto max-w-3xl px-4 py-12 sm:px-6 lg:px-8 text-center">
-          <h2 className="text-lg font-semibold text-gray-900">Interested in training for your team?</h2>
-          <p className="mt-2 text-sm text-gray-600">
+      {/* CTA */}
+      <section className="bg-teal-700 text-white">
+        <div className="mx-auto max-w-3xl px-4 py-20 sm:px-6 lg:px-8 text-center">
+          <h2 className="text-3xl font-bold">Interested in training for your team?</h2>
+          <p className="mt-4 text-lg text-teal-100 leading-relaxed">
             We'll walk you through the options and help you decide what makes sense — no commitment required.
           </p>
-          <div className="mt-6">
-            <Link to="/contact">
-              <Button variant="primary" size="md">
-                Join Training Waitlist
-              </Button>
+          <div className="mt-8">
+            <Link
+              to="/contact"
+              className="inline-flex items-center px-8 py-4 text-base font-semibold rounded-lg bg-white text-teal-700 hover:bg-teal-50 transition-colors"
+            >
+              Book a Free Discovery Call
             </Link>
           </div>
         </div>
       </section>
+
     </div>
   )
 }

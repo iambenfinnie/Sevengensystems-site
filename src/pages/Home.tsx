@@ -1,172 +1,221 @@
 import { Link } from 'react-router-dom'
-import { Button } from '@/components/ui/button'
 
 export function Home() {
   return (
     <div>
-      {/* Hero — problem first */}
-      <section className="bg-white">
-        <div className="mx-auto max-w-3xl px-4 py-20 sm:px-6 lg:px-8 text-center">
-          <h1 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
-            Your organization wants to use AI — but where do you start?
+
+      {/* Hero */}
+      <section className="bg-slate-900 text-white">
+        <div className="mx-auto max-w-5xl px-4 py-28 sm:px-6 lg:px-8 text-center">
+          <h1 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight leading-tight">
+            AI That Actually Works<br className="hidden sm:block" /> for Your Organization
           </h1>
-          <p className="mt-4 text-lg text-gray-600">
-            Most organizations know AI matters but are not sure what is practical, what is safe, or who to trust.
-            Seven Gen Systems helps you move forward with training programs that build real skills and
-            implementation services that embed AI into your actual operations.
+          <p className="mt-6 text-lg sm:text-xl text-slate-300 max-w-2xl mx-auto leading-relaxed">
+            We train your team, build your systems, and implement AI that fits how you already work — no disruption, no fluff, just results.
           </p>
-          <div className="mt-8 flex flex-col sm:flex-row gap-3 justify-center">
-            <Link to="/contact">
-              <Button variant="primary" size="lg">
-                Book a Strategy Call
-              </Button>
-            </Link>
-            <Link to="/training-programs">
-              <Button variant="secondary" size="lg">
-                Join Training Waitlist
-              </Button>
+          <div className="mt-10">
+            <Link
+              to="/contact"
+              className="inline-flex items-center px-8 py-4 text-base font-semibold rounded-lg bg-teal-600 text-white hover:bg-teal-500 transition-colors"
+            >
+              Book a Free Discovery Call
             </Link>
           </div>
         </div>
       </section>
 
-      {/* The problem */}
-      <section className="bg-gray-50 border-t border-gray-200">
-        <div className="mx-auto max-w-3xl px-4 py-16 sm:px-6 lg:px-8">
-          <h2 className="text-xl font-semibold text-gray-900">The challenge</h2>
-          <p className="mt-2 text-sm text-gray-600">
-            Organizations across sectors are hearing that AI can help — but the reality on the ground is more complicated.
-          </p>
-          <ul className="mt-6 space-y-3">
+      {/* Stats Strip */}
+      <section className="bg-slate-800">
+        <div className="mx-auto max-w-5xl px-4 py-14 sm:px-6 lg:px-8">
+          <div className="grid grid-cols-1 sm:grid-cols-3 gap-10 text-center">
             {[
-              'Staff are uncertain about what AI can actually do for their roles',
-              'Leadership wants to adopt AI but lacks a clear, low-risk starting point',
-              'Vendors over-promise and under-deliver, creating skepticism',
-              'Sensitive data and community trust make experimentation feel risky',
-              'There is no internal capacity to evaluate, build, or maintain AI systems',
+              { stat: '92%', label: 'of Fortune 500 companies now use AI in their operations' },
+              { stat: '7.5 hrs', label: 'saved per worker, per week — nearly a full workday back' },
+              { stat: '78%', label: 'of organizations have adopted AI in at least one business function' },
             ].map((item) => (
-              <li key={item} className="flex items-start gap-2 text-sm text-gray-700">
-                <span className="mt-0.5 text-gray-400">—</span>
-                {item}
-              </li>
+              <div key={item.stat}>
+                <div className="text-4xl sm:text-5xl font-extrabold text-teal-400">{item.stat}</div>
+                <p className="mt-3 text-sm text-slate-400 leading-relaxed max-w-xs mx-auto">{item.label}</p>
+              </div>
             ))}
-          </ul>
-        </div>
-      </section>
-
-      {/* What we do about it */}
-      <section className="bg-white border-t border-gray-200">
-        <div className="mx-auto max-w-3xl px-4 py-16 sm:px-6 lg:px-8">
-          <h2 className="text-xl font-semibold text-gray-900">What we do about it</h2>
-          <p className="mt-2 text-sm text-gray-600">
-            We offer two things: training that builds your team's confidence and skill, and implementation
-            that puts AI to work in your everyday operations.
-          </p>
-          <div className="mt-6 grid gap-6 sm:grid-cols-2">
-            <div className="border border-gray-200 rounded-lg p-5">
-              <h3 className="text-sm font-medium text-gray-900">Training programs</h3>
-              <p className="mt-2 text-sm text-gray-600">
-                Structured, role-relevant AI training — from foundations to hands-on application to
-                embedded enablement. Your team learns skills they can use the next day.
-              </p>
-              <Link to="/training-programs" className="mt-3 inline-block text-sm text-blue-700 underline hover:text-blue-900">
-                View training programs
-              </Link>
-            </div>
-            <div className="border border-gray-200 rounded-lg p-5">
-              <h3 className="text-sm font-medium text-gray-900">AI Operations</h3>
-              <p className="mt-2 text-sm text-gray-600">
-                We identify where AI fits into your existing workflows and build reliable systems
-                that reduce manual work — scoped tightly, with clear success criteria.
-              </p>
-              <Link to="/operational-ai" className="mt-3 inline-block text-sm text-blue-700 underline hover:text-blue-900">
-                Learn about implementation
-              </Link>
-            </div>
           </div>
+          <p className="mt-10 text-center text-xs text-slate-600">
+            Sources: AIPRM · LSE Global Research · Federal Reserve Bank of St. Louis
+          </p>
         </div>
       </section>
 
-      {/* Who We Work With — inline section */}
-      <section className="bg-gray-50 border-t border-gray-200">
-        <div className="mx-auto max-w-3xl px-4 py-16 sm:px-6 lg:px-8">
-          <h2 className="text-xl font-semibold text-gray-900">Who we work with</h2>
-          <p className="mt-2 text-sm text-gray-600">
-            We work with organizations that operate under real constraints — limited budgets, public accountability,
-            sensitive data, and communities that deserve careful, respectful approaches to technology adoption.
-          </p>
-          <div className="mt-6 grid gap-6 sm:grid-cols-2">
+      {/* What We Do */}
+      <section className="bg-white">
+        <div className="mx-auto max-w-5xl px-4 py-24 sm:px-6 lg:px-8">
+          <div className="text-center mb-14">
+            <h2 className="text-3xl sm:text-4xl font-bold text-slate-900">Three ways we work with you</h2>
+          </div>
+          <div className="grid gap-8 sm:grid-cols-3">
             {[
               {
-                name: 'Indigenous organizations and band councils',
-                desc: 'Managing community programs, economic development, and essential services with respect for data sovereignty and existing governance structures.',
+                title: 'AI Education & Workshops',
+                desc: 'Hands-on training that turns your team from AI-curious to AI-capable. Built around your industry, your tools, and your actual workflows — not generic slides.',
+                link: '/training-programs',
+                linkText: 'View training programs →',
               },
               {
-                name: 'Nonprofits and community organizations',
-                desc: 'Mission-driven organizations that run lean, report to funders, and need to demonstrate measurable outcomes without open-ended technology projects.',
+                title: 'Automation & Implementation',
+                desc: 'We identify where AI saves you the most time and build it. From voice agents to workflow automation, we deliver working systems you can use the day we leave.',
+                link: '/operational-ai',
+                linkText: 'Learn about implementation →',
               },
               {
-                name: 'Government departments and agencies',
-                desc: 'Public-sector teams responsible for program delivery, workforce development, or digital modernization with clear scope and accountability requirements.',
+                title: 'Strategy & Consulting',
+                desc: "Not sure where to start? We map your organization's AI opportunities and give you a clear roadmap with real ROI attached to every recommendation.",
+                link: '/contact',
+                linkText: 'Book a strategy call →',
               },
-              {
-                name: 'Small and medium-sized businesses',
-                desc: 'Businesses with operational bottlenecks that want practical AI adoption — not a research project — working with their existing team and systems.',
-              },
-            ].map((org) => (
-              <div key={org.name}>
-                <h3 className="text-sm font-medium text-gray-900">{org.name}</h3>
-                <p className="mt-1 text-sm text-gray-600">{org.desc}</p>
+            ].map((service) => (
+              <div
+                key={service.title}
+                className="rounded-xl border border-slate-200 p-7 hover:border-teal-300 hover:shadow-sm transition-all"
+              >
+                <h3 className="text-lg font-semibold text-slate-900">{service.title}</h3>
+                <p className="mt-3 text-sm text-slate-600 leading-relaxed">{service.desc}</p>
+                <Link
+                  to={service.link}
+                  className="mt-5 inline-block text-sm font-semibold text-teal-600 hover:text-teal-700"
+                >
+                  {service.linkText}
+                </Link>
               </div>
             ))}
           </div>
         </div>
       </section>
 
-      {/* How we work */}
-      <section className="bg-white border-t border-gray-200">
-        <div className="mx-auto max-w-3xl px-4 py-16 sm:px-6 lg:px-8">
-          <h2 className="text-xl font-semibold text-gray-900">How we work</h2>
-          <p className="mt-2 text-sm text-gray-600">
-            Every engagement is scoped, documented, and accountable.
-          </p>
-          <ul className="mt-6 space-y-3">
+      {/* How It Works */}
+      <section className="bg-slate-50">
+        <div className="mx-auto max-w-5xl px-4 py-24 sm:px-6 lg:px-8">
+          <div className="text-center mb-14">
+            <h2 className="text-3xl sm:text-4xl font-bold text-slate-900">Simple process. Real outcomes.</h2>
+          </div>
+          <div className="grid gap-12 sm:grid-cols-3 text-center">
             {[
-              'We start with a conversation — no commitment, no pitch deck',
-              'We define success criteria together, in writing, before work begins',
-              'Deliverables are fixed-scope: clear timelines, no surprises',
-              'Your team keeps everything — no vendor lock-in, no dependency',
-            ].map((item) => (
-              <li key={item} className="flex items-start gap-2 text-sm text-gray-700">
-                <span className="mt-0.5 text-gray-400">—</span>
-                {item}
-              </li>
+              {
+                number: '01',
+                title: 'Discovery Call',
+                desc: 'We learn how your organization works, where the friction is, and what AI can realistically do for you. No commitment required.',
+              },
+              {
+                number: '02',
+                title: 'Custom Plan',
+                desc: "You get a clear scope — what we'll build or teach, what it costs, and what you can expect on the other side.",
+              },
+              {
+                number: '03',
+                title: 'Delivery & Support',
+                desc: "We execute and stay involved until it's working. Your team walks away confident, not confused.",
+              },
+            ].map((step) => (
+              <div key={step.number}>
+                <div className="text-5xl font-extrabold text-teal-200">{step.number}</div>
+                <h3 className="mt-4 text-lg font-semibold text-slate-900">{step.title}</h3>
+                <p className="mt-2 text-sm text-slate-600 leading-relaxed">{step.desc}</p>
+              </div>
             ))}
-          </ul>
+          </div>
         </div>
       </section>
 
-      {/* Bottom CTA */}
-      <section className="bg-gray-50 border-t border-gray-200">
-        <div className="mx-auto max-w-3xl px-4 py-16 sm:px-6 lg:px-8 text-center">
-          <h2 className="text-xl font-semibold text-gray-900">Not sure where to start?</h2>
-          <p className="mt-2 text-sm text-gray-600">
-            That is normal. We are happy to talk through what might make sense for your organization — no obligation.
+      {/* Case Study */}
+      <section className="bg-white">
+        <div className="mx-auto max-w-4xl px-4 py-24 sm:px-6 lg:px-8">
+          <div className="text-center mb-14">
+            <h2 className="text-3xl sm:text-4xl font-bold text-slate-900">Proof it works</h2>
+          </div>
+          <div className="rounded-2xl bg-slate-50 border border-slate-200 p-8 sm:p-12">
+            <div className="text-xs font-bold text-teal-600 uppercase tracking-widest">Case Study</div>
+            <h3 className="mt-3 text-2xl font-bold text-slate-900">Stanford Hearing Centre — AI Voice Agent</h3>
+            <p className="mt-5 text-slate-600 leading-relaxed">
+              Stanford Hearing Centre needed a smarter way to handle inbound patient inquiries. We built a custom AI voice agent that handles initial contact, qualifies patient needs, and routes calls automatically.
+            </p>
+            <p className="mt-4 text-slate-600 leading-relaxed">
+              The result: less time on routine calls, faster patient response, and a system their team actually uses every day.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      {/* Problem We Solve */}
+      <section className="bg-slate-900 text-white">
+        <div className="mx-auto max-w-3xl px-4 py-24 sm:px-6 lg:px-8 text-center">
+          <h2 className="text-3xl sm:text-4xl font-bold">Most AI initiatives fail. Here's why.</h2>
+          <p className="mt-6 text-lg text-slate-300 leading-relaxed">
+            42% of companies abandoned most of their AI initiatives in 2025. Not because AI doesn't work — because it wasn't implemented with their team in mind.
           </p>
-          <div className="mt-6 flex flex-col sm:flex-row gap-3 justify-center">
-            <Link to="/contact">
-              <Button variant="primary" size="md">
-                Book a Strategy Call
-              </Button>
-            </Link>
-            <Link to="/training-programs">
-              <Button variant="secondary" size="md">
-                Join Training Waitlist
-              </Button>
+          <p className="mt-5 text-slate-400 leading-relaxed">
+            A company buys the tools, runs a lunch-and-learn, and six months later nothing has changed. That's not an AI problem. That's a training and implementation problem.
+          </p>
+          <p className="mt-8 text-xl font-semibold text-teal-400">Seven Gen exists to close that gap.</p>
+        </div>
+      </section>
+
+      {/* Who We Work With */}
+      <section className="bg-slate-50">
+        <div className="mx-auto max-w-5xl px-4 py-24 sm:px-6 lg:px-8">
+          <div className="text-center mb-14">
+            <h2 className="text-3xl sm:text-4xl font-bold text-slate-900">
+              Built for organizations ready to move past the hype
+            </h2>
+            <p className="mt-4 text-slate-600 max-w-2xl mx-auto leading-relaxed">
+              We work with mid-size businesses, nonprofits, training organizations, and leadership teams that are done experimenting and ready to implement AI that actually sticks.
+            </p>
+          </div>
+          <div className="grid gap-6 sm:grid-cols-2">
+            {[
+              {
+                name: 'Mid-size Businesses',
+                desc: 'Operational bottlenecks, manual work, and teams that are ready for AI — but need it to actually fit their existing systems.',
+              },
+              {
+                name: 'Nonprofits & Training Organizations',
+                desc: 'Mission-driven teams that run lean, report to funders, and need measurable outcomes without open-ended tech projects.',
+              },
+              {
+                name: 'Government Departments & Agencies',
+                desc: 'Public-sector teams responsible for program delivery or digital modernization with clear scope and accountability requirements.',
+              },
+              {
+                name: 'Indigenous Organizations & Band Councils',
+                desc: 'Community programs, economic development, and essential services — with respect for data sovereignty and existing governance.',
+              },
+            ].map((org) => (
+              <div key={org.name} className="rounded-xl border border-slate-200 bg-white p-7">
+                <h3 className="font-semibold text-slate-900">{org.name}</h3>
+                <p className="mt-2 text-sm text-slate-600 leading-relaxed">{org.desc}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Final CTA */}
+      <section className="bg-teal-700 text-white">
+        <div className="mx-auto max-w-3xl px-4 py-24 sm:px-6 lg:px-8 text-center">
+          <h2 className="text-3xl sm:text-4xl font-bold">
+            Ready to see what AI can actually do for your organization?
+          </h2>
+          <p className="mt-5 text-lg text-teal-100 leading-relaxed">
+            Book a free 30-minute discovery call. No pitch — just an honest conversation about what's possible.
+          </p>
+          <div className="mt-10">
+            <Link
+              to="/contact"
+              className="inline-flex items-center px-8 py-4 text-base font-semibold rounded-lg bg-white text-teal-700 hover:bg-teal-50 transition-colors"
+            >
+              Book a Free Discovery Call
             </Link>
           </div>
         </div>
       </section>
+
     </div>
   )
 }
