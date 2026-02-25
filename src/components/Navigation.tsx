@@ -16,7 +16,7 @@ export function Navigation() {
         <div className="flex h-16 items-center justify-between">
           {/* Logo mark + name */}
           <Link to="/" className="flex items-center gap-2.5 flex-shrink-0">
-            <img src="/Seven Gen Leaf Favicon.png" alt="Seven Gen Systems" className="h-9 w-auto" />
+            <img src="/Seven Gen Leaf Favicon.png" alt="Seven Gen Systems" className="h-12 w-auto scale-125 origin-center" />
             <span className="text-base font-bold text-slate-900 tracking-tight">Seven Gen Systems</span>
           </Link>
 
