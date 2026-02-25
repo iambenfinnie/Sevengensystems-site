@@ -52,7 +52,7 @@ export function Contact() {
         <div className="mx-auto max-w-2xl px-4 py-24 sm:px-6 lg:px-8">
 
           <div className="mb-8 rounded-xl bg-white border border-slate-200 px-6 py-4 flex items-center gap-3">
-            <span className="text-teal-600 font-semibold text-sm">Email us directly:</span>
+            <span className="text-teal-600 font-semibold text-sm">Or email us directly:</span>
             <a
               href="mailto:contact@sevengensystems.com"
               className="text-sm text-slate-600 hover:text-teal-600 transition-colors"
