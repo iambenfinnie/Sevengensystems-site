@@ -3,8 +3,9 @@ import { Link } from 'react-router-dom'
 import { Logo } from './Logo'
 
 const navLinks = [
-  { to: '/training-programs', label: 'Training' },
-  { to: '/operational-ai', label: 'AI Operations' },
+  { to: '/grow', label: 'Grow' },
+  { to: '/automate', label: 'Automate' },
+  { to: '/learn', label: 'Learn' },
   { to: '/about', label: 'About' },
 ]
 

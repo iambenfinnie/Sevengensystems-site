@@ -8,17 +8,23 @@ export function Home() {
       <section className="bg-slate-900 text-white">
         <div className="mx-auto max-w-5xl px-4 py-28 sm:px-6 lg:px-8 text-center">
           <h1 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight leading-tight">
-            AI That Actually Works<br className="hidden sm:block" /> for Your Organization
+            AI That Grows Your Business,<br className="hidden sm:block" /> Automates Your Operations,<br className="hidden sm:block" /> and Trains Your Team.
           </h1>
           <p className="mt-6 text-lg sm:text-xl text-slate-300 max-w-2xl mx-auto leading-relaxed">
-            We train your team, build your systems, and implement AI that fits how you already work — no disruption, no fluff, just results.
+            Practical AI for business owners who want results — not slides, not hype, not a six-month consulting engagement. Just systems that work.
           </p>
-          <div className="mt-10">
+          <div className="mt-10 flex flex-col sm:flex-row gap-4 justify-center">
             <Link
               to="/contact"
-              className="inline-flex items-center px-8 py-4 text-base font-semibold rounded-lg bg-teal-600 text-white hover:bg-teal-500 transition-colors"
+              className="inline-flex items-center justify-center px-8 py-4 text-base font-semibold rounded-lg bg-teal-600 text-white hover:bg-teal-500 transition-colors"
             >
               Book a Free Discovery Call
+            </Link>
+            <Link
+              to="/grow"
+              className="inline-flex items-center justify-center px-8 py-4 text-base font-semibold rounded-lg border border-slate-600 text-slate-300 hover:border-slate-400 hover:text-white transition-colors"
+            >
+              See What We Do
             </Link>
           </div>
         </div>
@@ -54,29 +60,33 @@ export function Home() {
           <div className="grid gap-8 sm:grid-cols-3">
             {[
               {
-                title: 'AI Education & Workshops',
-                desc: 'Hands-on training that turns your team from AI-curious to AI-capable. Built around your industry, your tools, and your actual workflows — not generic slides.',
-                link: '/training-programs',
-                linkText: 'View training programs →',
+                label: 'Grow',
+                title: 'Get More Clients On Autopilot',
+                desc: 'Lead generation systems, AI content creation, and social media that fills your pipeline — without you doing the chasing.',
+                link: '/grow',
+                linkText: 'See how we help you grow →',
               },
               {
-                title: 'Automation & Implementation',
-                desc: 'We identify where AI saves you the most time and build it. From voice agents to workflow automation, we deliver working systems you can use the day we leave.',
-                link: '/operational-ai',
-                linkText: 'Learn about implementation →',
+                label: 'Automate',
+                title: 'Reclaim Your Time With AI',
+                desc: 'Workflow automation, AI voice agents, CRM setup, and custom tools. We build systems that handle the repetitive work so your team can focus on what matters.',
+                link: '/automate',
+                linkText: 'See what we automate →',
               },
               {
-                title: 'Strategy & Consulting',
-                desc: "Not sure where to start? We map your organization's AI opportunities and give you a clear roadmap with real ROI attached to every recommendation.",
-                link: '/contact',
-                linkText: 'Book a strategy call →',
+                label: 'Learn',
+                title: 'Train Your Team to Use AI',
+                desc: 'Hands-on workshops for businesses and organizations. Practical, jargon-free, and often fundable through existing grants.',
+                link: '/learn',
+                linkText: 'See our training programs →',
               },
             ].map((service) => (
               <div
                 key={service.title}
                 className="rounded-xl border border-slate-200 p-7 hover:border-teal-300 hover:shadow-sm transition-all"
               >
-                <h3 className="text-lg font-semibold text-slate-900">{service.title}</h3>
+                <p className="text-xs font-bold text-teal-600 uppercase tracking-widest">{service.label}</p>
+                <h3 className="mt-2 text-lg font-semibold text-slate-900">{service.title}</h3>
                 <p className="mt-3 text-sm text-slate-600 leading-relaxed">{service.desc}</p>
                 <Link
                   to={service.link}
@@ -101,7 +111,7 @@ export function Home() {
               {
                 number: '01',
                 title: 'Discovery Call',
-                desc: 'We learn how your organization works, where the friction is, and what AI can realistically do for you. No commitment required.',
+                desc: 'We learn how your business works, where the friction is, and what AI can realistically do for you. No commitment required.',
               },
               {
                 number: '02',
@@ -111,7 +121,7 @@ export function Home() {
               {
                 number: '03',
                 title: 'Delivery & Support',
-                desc: "We execute and stay involved until it's working. Your team walks away confident, not confused.",
+                desc: "We execute and stay involved until it's working. You walk away confident, not confused.",
               },
             ].map((step) => (
               <div key={step.number}>
@@ -132,9 +142,30 @@ export function Home() {
             42% of companies abandoned most of their AI initiatives in 2025. Not because AI doesn't work — because it wasn't implemented with their team in mind.
           </p>
           <p className="mt-5 text-slate-400 leading-relaxed">
-            A company buys the tools, runs a lunch-and-learn, and six months later nothing has changed. That's not an AI problem. That's a training and implementation problem.
+            A business buys the tools, runs a lunch-and-learn, and six months later nothing has changed. That's not an AI problem. That's a training and implementation problem.
           </p>
           <p className="mt-8 text-xl font-semibold text-teal-400">Seven Gen exists to close that gap.</p>
+        </div>
+      </section>
+
+      {/* Who We Are */}
+      <section className="bg-white">
+        <div className="mx-auto max-w-3xl px-4 py-24 sm:px-6 lg:px-8 text-center">
+          <h2 className="text-3xl sm:text-4xl font-bold text-slate-900">Built different. On purpose.</h2>
+          <p className="mt-6 text-lg text-slate-600 leading-relaxed">
+            Seven Gen Systems is 51% Indigenous-owned — a point of pride that shapes how we do business. We operate with a long view: building relationships, not transactions, and creating solutions that last.
+          </p>
+          <p className="mt-4 text-slate-600 leading-relaxed">
+            We're a small, focused team based in Alberta. We don't oversell, we don't disappear after delivery, and we don't build things that need us around to maintain them. That's the Seven Gen way.
+          </p>
+          <div className="mt-8">
+            <Link
+              to="/about"
+              className="inline-block text-sm font-semibold text-teal-600 hover:text-teal-700"
+            >
+              Learn more about us →
+            </Link>
+          </div>
         </div>
       </section>
 
@@ -143,16 +174,16 @@ export function Home() {
         <div className="mx-auto max-w-5xl px-4 py-24 sm:px-6 lg:px-8">
           <div className="text-center mb-14">
             <h2 className="text-3xl sm:text-4xl font-bold text-slate-900">
-              Built for organizations ready to move past the hype
+              Built for businesses ready to move past the hype
             </h2>
             <p className="mt-4 text-slate-600 max-w-2xl mx-auto leading-relaxed">
-              We work with mid-size businesses, nonprofits, training organizations, and leadership teams that are done experimenting and ready to implement AI that actually sticks.
+              We work with business owners, mid-size companies, nonprofits, and leadership teams that are done experimenting and ready to implement AI that actually sticks.
             </p>
           </div>
           <div className="grid gap-6 sm:grid-cols-2">
             {[
               {
-                name: 'Mid-size Businesses',
+                name: 'Small & Mid-size Businesses',
                 desc: 'Operational bottlenecks, manual work, and teams that are ready for AI — but need it to actually fit their existing systems.',
               },
               {
@@ -181,10 +212,10 @@ export function Home() {
       <section className="bg-teal-700 text-white">
         <div className="mx-auto max-w-3xl px-4 py-24 sm:px-6 lg:px-8 text-center">
           <h2 className="text-3xl sm:text-4xl font-bold">
-            Ready to see what AI can actually do for your organization?
+            Ready to see what AI can actually do for your business?
           </h2>
           <p className="mt-5 text-lg text-teal-100 leading-relaxed">
-            Book a free 30-minute discovery call. No pitch — just an honest conversation about what's possible.
+            Book a free 30-minute discovery call. No pitch — just an honest conversation about what's possible and where to start.
           </p>
           <div className="mt-10">
             <Link

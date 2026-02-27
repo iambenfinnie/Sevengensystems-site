@@ -8,15 +8,16 @@ export function Footer() {
           <div>
             <h3 className="text-lg font-bold text-white">Seven Gen Systems</h3>
             <p className="mt-3 text-sm text-slate-400 leading-relaxed">
-              AI education and implementation for organizations ready to move past the hype.
+              AI that grows your business, automates your operations, and trains your team.
             </p>
-            <p className="mt-4 text-xs text-slate-500">Alberta, Canada &nbsp;·&nbsp; CCIB Certified</p>
+            <p className="mt-4 text-xs text-slate-500">Alberta, Canada &nbsp;·&nbsp; 51% Indigenous-Owned &nbsp;·&nbsp; CCIB Certified</p>
           </div>
           <div>
             <h4 className="text-sm font-semibold text-slate-300 uppercase tracking-wider">Company</h4>
             <ul className="mt-4 space-y-2">
-              <li><Link to="/training-programs" className="text-sm text-slate-400 hover:text-white transition-colors">Training Programs</Link></li>
-              <li><Link to="/operational-ai" className="text-sm text-slate-400 hover:text-white transition-colors">AI Operations</Link></li>
+              <li><Link to="/grow" className="text-sm text-slate-400 hover:text-white transition-colors">Grow</Link></li>
+              <li><Link to="/automate" className="text-sm text-slate-400 hover:text-white transition-colors">Automate</Link></li>
+              <li><Link to="/learn" className="text-sm text-slate-400 hover:text-white transition-colors">Learn</Link></li>
               <li><Link to="/about" className="text-sm text-slate-400 hover:text-white transition-colors">About Us</Link></li>
               <li><Link to="/contact" className="text-sm text-slate-400 hover:text-white transition-colors">Contact</Link></li>
             </ul>
