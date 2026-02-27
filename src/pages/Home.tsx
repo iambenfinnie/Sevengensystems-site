@@ -153,10 +153,10 @@ export function Home() {
         <div className="mx-auto max-w-3xl px-4 py-24 sm:px-6 lg:px-8 text-center">
           <h2 className="text-3xl sm:text-4xl font-bold text-slate-900">Built different. On purpose.</h2>
           <p className="mt-6 text-lg text-slate-600 leading-relaxed">
-            Seven Gen Systems is 51% Indigenous-owned — a point of pride that shapes how we do business. We operate with a long view: building relationships, not transactions, and creating solutions that last.
+            Seven Gen Systems is Indigenous-owned — a point of pride that shapes how we do business. We operate with a long view: building relationships, not transactions, and creating solutions that last.
           </p>
           <p className="mt-4 text-slate-600 leading-relaxed">
-            We're a small, focused team based in Alberta. We don't oversell, we don't disappear after delivery, and we don't build things that need us around to maintain them. That's the Seven Gen way.
+            We're a small, focused team serving clients Canada wide. We don't oversell, we don't disappear after delivery, and we don't build things that need us around to maintain them. That's the Seven Gen way.
           </p>
           <div className="mt-8">
             <Link
