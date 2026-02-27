@@ -8,7 +8,7 @@ export function Home() {
       <section className="bg-slate-900 text-white">
         <div className="mx-auto max-w-5xl px-4 py-28 sm:px-6 lg:px-8 text-center">
           <h1 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight leading-tight">
-            AI That Grows Your Business,<br className="hidden sm:block" /> Automates Your Operations,<br className="hidden sm:block" /> and Trains Your Team.
+            Want to use AI but don't know where to start?
           </h1>
           <p className="mt-6 text-lg sm:text-xl text-slate-300 max-w-2xl mx-auto leading-relaxed">
             Most businesses waste hours every week on tasks AI could handle. We show your team how to use it — and build custom solutions that cut the busywork, speed up lead response, and fit the way you actually work.
@@ -130,41 +130,6 @@ export function Home() {
                 <p className="mt-2 text-sm text-slate-600 leading-relaxed">{step.desc}</p>
               </div>
             ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Problem We Solve */}
-      <section className="bg-slate-900 text-white">
-        <div className="mx-auto max-w-3xl px-4 py-24 sm:px-6 lg:px-8 text-center">
-          <h2 className="text-3xl sm:text-4xl font-bold">Most AI initiatives fail. Here's why.</h2>
-          <p className="mt-6 text-lg text-slate-300 leading-relaxed">
-            42% of companies abandoned most of their AI initiatives in 2025. Not because AI doesn't work — because it wasn't implemented with their team in mind.
-          </p>
-          <p className="mt-5 text-slate-400 leading-relaxed">
-            A business buys the tools, runs a lunch-and-learn, and six months later nothing has changed. That's not an AI problem. That's a training and implementation problem.
-          </p>
-          <p className="mt-8 text-xl font-semibold text-teal-400">Seven Gen exists to close that gap.</p>
-        </div>
-      </section>
-
-      {/* Who We Are */}
-      <section className="bg-white">
-        <div className="mx-auto max-w-3xl px-4 py-24 sm:px-6 lg:px-8 text-center">
-          <h2 className="text-3xl sm:text-4xl font-bold text-slate-900">Built different. On purpose.</h2>
-          <p className="mt-6 text-lg text-slate-600 leading-relaxed">
-            Seven Gen Systems is Indigenous-owned — a point of pride that shapes how we do business. We operate with a long view: building relationships, not transactions, and creating solutions that last.
-          </p>
-          <p className="mt-4 text-slate-600 leading-relaxed">
-            We're a small, focused team serving clients Canada wide. We don't oversell, we don't disappear after delivery, and we don't build things that need us around to maintain them. That's the Seven Gen way.
-          </p>
-          <div className="mt-8">
-            <Link
-              to="/about"
-              className="inline-block text-sm font-semibold text-teal-600 hover:text-teal-700"
-            >
-              Learn more about us →
-            </Link>
           </div>
         </div>
       </section>
