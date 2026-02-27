@@ -11,7 +11,7 @@ export function Home() {
             AI That Grows Your Business,<br className="hidden sm:block" /> Automates Your Operations,<br className="hidden sm:block" /> and Trains Your Team.
           </h1>
           <p className="mt-6 text-lg sm:text-xl text-slate-300 max-w-2xl mx-auto leading-relaxed">
-            Practical AI for business owners who want results — not slides, not hype, not a six-month consulting engagement. Just systems that work.
+            Most businesses waste hours every week on tasks AI could handle. We show your team how to use it — and build custom solutions that cut the busywork, speed up lead response, and fit the way you actually work.
           </p>
           <div className="mt-10 flex flex-col sm:flex-row gap-4 justify-center">
             <Link
