@@ -7,8 +7,10 @@ export function Home() {
       {/* Hero */}
       <section className="bg-slate-900 text-white">
         <div className="mx-auto max-w-5xl px-4 py-28 sm:px-6 lg:px-8 text-center">
-          <h1 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight leading-tight">
-            AI That Grows Your Business,<br className="hidden sm:block" /> Automates Your Operations,<br className="hidden sm:block" /> and Trains Your Team.
+          <h1 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight leading-snug">
+            <span className="block">Grow Your Business.</span>
+            <span className="block">Automate Your Operations.</span>
+            <span className="block text-teal-400">Train Your Team on AI.</span>
           </h1>
           <p className="mt-6 text-lg sm:text-xl text-slate-300 max-w-2xl mx-auto leading-relaxed">
             Most businesses waste hours every week on tasks AI could handle. We show your team how to use it — and build custom solutions that cut the busywork, speed up lead response, and fit the way you actually work.
