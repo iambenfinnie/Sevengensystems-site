@@ -134,41 +134,6 @@ export function Home() {
         </div>
       </section>
 
-      {/* Problem We Solve */}
-      <section className="bg-slate-900 text-white">
-        <div className="mx-auto max-w-3xl px-4 py-24 sm:px-6 lg:px-8 text-center">
-          <h2 className="text-3xl sm:text-4xl font-bold">Most AI initiatives fail. Here's why.</h2>
-          <p className="mt-6 text-lg text-slate-300 leading-relaxed">
-            42% of companies abandoned most of their AI initiatives in 2025. Not because AI doesn't work — because it wasn't implemented with their team in mind.
-          </p>
-          <p className="mt-5 text-slate-400 leading-relaxed">
-            A business buys the tools, runs a lunch-and-learn, and six months later nothing has changed. That's not an AI problem. That's a training and implementation problem.
-          </p>
-          <p className="mt-8 text-xl font-semibold text-teal-400">Seven Gen exists to close that gap.</p>
-        </div>
-      </section>
-
-      {/* Who We Are */}
-      <section className="bg-white">
-        <div className="mx-auto max-w-3xl px-4 py-24 sm:px-6 lg:px-8 text-center">
-          <h2 className="text-3xl sm:text-4xl font-bold text-slate-900">Built different. On purpose.</h2>
-          <p className="mt-6 text-lg text-slate-600 leading-relaxed">
-            Seven Gen Systems is Indigenous-owned — a point of pride that shapes how we do business. We operate with a long view: building relationships, not transactions, and creating solutions that last.
-          </p>
-          <p className="mt-4 text-slate-600 leading-relaxed">
-            We're a small, focused team serving clients Canada wide. We don't oversell, we don't disappear after delivery, and we don't build things that need us around to maintain them. That's the Seven Gen way.
-          </p>
-          <div className="mt-8">
-            <Link
-              to="/about"
-              className="inline-block text-sm font-semibold text-teal-600 hover:text-teal-700"
-            >
-              Learn more about us →
-            </Link>
-          </div>
-        </div>
-      </section>
-
       {/* Who We Work With */}
       <section className="bg-slate-50">
         <div className="mx-auto max-w-5xl px-4 py-24 sm:px-6 lg:px-8">
