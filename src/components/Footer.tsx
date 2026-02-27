@@ -8,9 +8,9 @@ export function Footer() {
           <div>
             <h3 className="text-lg font-bold text-white">Seven Gen Systems</h3>
             <p className="mt-3 text-sm text-slate-400 leading-relaxed">
-              AI that grows your business, automates your operations, and trains your team.
+              AI strategy, automation, and education for Canadian businesses.
             </p>
-            <p className="mt-4 text-xs text-slate-500">Alberta, Canada &nbsp;·&nbsp; 51% Indigenous-Owned &nbsp;·&nbsp; CCIB Certified</p>
+            <p className="mt-4 text-xs text-slate-500">Canada Wide &nbsp;·&nbsp; Indigenous-Owned &nbsp;·&nbsp; CCIB Certified</p>
           </div>
           <div>
             <h4 className="text-sm font-semibold text-slate-300 uppercase tracking-wider">Company</h4>

@@ -11,7 +11,7 @@ export function Home() {
             AI That Grows Your Business,<br className="hidden sm:block" /> Automates Your Operations,<br className="hidden sm:block" /> and Trains Your Team.
           </h1>
           <p className="mt-6 text-lg sm:text-xl text-slate-300 max-w-2xl mx-auto leading-relaxed">
-            Practical AI for business owners who want results — not slides, not hype, not a six-month consulting engagement. Just systems that work.
+            Most businesses waste hours every week on tasks AI could handle. We show your team how to use it — and build custom solutions that cut the busywork, speed up lead response, and fit the way you actually work.
           </p>
           <div className="mt-10 flex flex-col sm:flex-row gap-4 justify-center">
             <Link
@@ -153,10 +153,10 @@ export function Home() {
         <div className="mx-auto max-w-3xl px-4 py-24 sm:px-6 lg:px-8 text-center">
           <h2 className="text-3xl sm:text-4xl font-bold text-slate-900">Built different. On purpose.</h2>
           <p className="mt-6 text-lg text-slate-600 leading-relaxed">
-            Seven Gen Systems is 51% Indigenous-owned — a point of pride that shapes how we do business. We operate with a long view: building relationships, not transactions, and creating solutions that last.
+            Seven Gen Systems is Indigenous-owned — a point of pride that shapes how we do business. We operate with a long view: building relationships, not transactions, and creating solutions that last.
           </p>
           <p className="mt-4 text-slate-600 leading-relaxed">
-            We're a small, focused team based in Alberta. We don't oversell, we don't disappear after delivery, and we don't build things that need us around to maintain them. That's the Seven Gen way.
+            We're a small, focused team serving clients Canada wide. We don't oversell, we don't disappear after delivery, and we don't build things that need us around to maintain them. That's the Seven Gen way.
           </p>
           <div className="mt-8">
             <Link
