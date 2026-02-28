@@ -25,30 +25,6 @@ export function Automate() {
         </div>
       </section>
 
-      {/* Case Study */}
-      <section className="bg-teal-50 border-y border-teal-100">
-        <div className="mx-auto max-w-4xl px-4 py-16 sm:px-6 lg:px-8">
-          <div className="flex flex-col sm:flex-row gap-8 items-start">
-            <div className="flex-shrink-0">
-              <span className="inline-block bg-teal-600 text-white text-xs font-bold uppercase tracking-widest px-3 py-1 rounded-full">
-                Real Case Study
-              </span>
-            </div>
-            <div>
-              <h2 className="text-xl sm:text-2xl font-bold text-slate-900">
-                AI Voice Agent for a Hearing Centre
-              </h2>
-              <p className="mt-3 text-slate-700 leading-relaxed">
-                We built a custom AI voice agent for a hearing centre that now handles all inbound calls automatically. It answers common questions, books appointments, and routes complex inquiries to staff — without a human picking up the phone.
-              </p>
-              <p className="mt-3 text-slate-600 leading-relaxed">
-                The result: staff spend less time on the phone and more time with patients. The clinic runs smoother, and nothing falls through the cracks after hours.
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
-
       {/* What We Build */}
       <section className="bg-white">
         <div className="mx-auto max-w-5xl px-4 py-24 sm:px-6 lg:px-8">
