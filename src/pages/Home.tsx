@@ -171,7 +171,7 @@ export function Home() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, ease: 'easeOut', delay: 0.2 }}
           >
-            We help organizations across Canada identify where AI makes the biggest difference, then we build it, automate it, and train your team to use it.
+            We help organizations across Canada find where AI makes the biggest difference, then build it, automate it, and train your team to use it.
           </motion.p>
 
           <motion.div
