@@ -1,42 +1,75 @@
 import { Link } from 'react-router-dom'
+import { motion } from 'motion/react'
+
+const fadeUp = {
+  hidden: { opacity: 0, y: 24 },
+  show: { opacity: 1, y: 0 },
+}
 
 export function About() {
   return (
     <div>
 
-      {/* Hero */}
-      <section className="bg-slate-900 text-white">
-        <div className="mx-auto max-w-5xl px-4 py-24 sm:px-6 lg:px-8">
-          <h1 className="text-4xl sm:text-5xl font-extrabold tracking-tight">About Us</h1>
-          <p className="mt-5 text-lg text-slate-300 max-w-2xl leading-relaxed">
+      {/* ── Hero ─────────────────────────────────────────────────────────── */}
+      <section className="relative bg-slate-900 text-white overflow-hidden">
+        <div className="hero-grid absolute inset-0 pointer-events-none" aria-hidden="true" />
+        <div className="relative mx-auto max-w-5xl px-4 py-24 sm:px-6 lg:px-8">
+          <motion.h1
+            className="text-4xl sm:text-5xl font-extrabold tracking-tight"
+            initial={{ opacity: 0, y: 32 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, ease: 'easeOut' }}
+          >
+            About Us
+          </motion.h1>
+          <motion.p
+            className="mt-5 text-lg text-slate-300 max-w-2xl leading-relaxed"
+            initial={{ opacity: 0, y: 24 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, ease: 'easeOut', delay: 0.15 }}
+          >
             Seven Gen Systems is an Indigenous-owned AI education and automation firm. We keep
-            things scoped, honest, and practical — and we build systems that last.
-          </p>
+            things scoped, honest, and practical. We build systems that last.
+          </motion.p>
         </div>
       </section>
 
-      {/* Seven Generations Principle */}
+      {/* ── Seven Generations Principle ──────────────────────────────────── */}
       <section className="bg-white">
         <div className="mx-auto max-w-5xl px-4 py-24 sm:px-6 lg:px-8">
-          <div className="max-w-2xl">
+          <motion.div
+            className="max-w-2xl"
+            variants={fadeUp}
+            initial="hidden"
+            whileInView="show"
+            viewport={{ once: true, margin: '-40px' }}
+            transition={{ duration: 0.5, ease: 'easeOut' }}
+          >
             <div className="text-xs font-bold text-teal-600 uppercase tracking-widest mb-4">Our Name</div>
             <h2 className="text-3xl font-bold text-slate-900">The Seven Generations principle</h2>
             <p className="mt-5 text-slate-600 leading-relaxed">
               Our name comes from an Indigenous governance principle: decisions today should
               account for their impact seven generations forward. For us that means we build
-              things that last — systems your team can understand, maintain, and own — and
-              we do not recommend technology we would not trust to hold up over time.
+              things that last. Systems your team can understand, maintain, and own. We
+              do not recommend technology we would not trust to hold up over time.
             </p>
-          </div>
+          </motion.div>
         </div>
       </section>
 
-      {/* How we operate */}
+      {/* ── How We Operate ───────────────────────────────────────────────── */}
       <section className="bg-slate-50">
         <div className="mx-auto max-w-5xl px-4 py-24 sm:px-6 lg:px-8">
-          <div className="text-center mb-14">
+          <motion.div
+            className="text-center mb-14"
+            variants={fadeUp}
+            initial="hidden"
+            whileInView="show"
+            viewport={{ once: true, margin: '-40px' }}
+            transition={{ duration: 0.5, ease: 'easeOut' }}
+          >
             <h2 className="text-3xl font-bold text-slate-900">How we operate</h2>
-          </div>
+          </motion.div>
           <div className="grid gap-6 sm:grid-cols-2">
             {[
               {
@@ -55,24 +88,46 @@ export function About() {
                 title: 'Build for independence',
                 desc: 'You should be stronger after working with us, not more dependent on us. Everything we deliver is yours to keep and run.',
               },
-            ].map((value) => (
-              <div key={value.title} className="rounded-xl border border-slate-200 bg-white p-7 hover:border-teal-300 transition-colors">
+            ].map((value, i) => (
+              <motion.div
+                key={value.title}
+                className="rounded-xl border border-slate-200 bg-white p-7 hover:border-teal-300 hover:shadow-lg hover:-translate-y-1 transition-all duration-300 cursor-default"
+                variants={fadeUp}
+                initial="hidden"
+                whileInView="show"
+                viewport={{ once: true, margin: '-40px' }}
+                transition={{ duration: 0.5, ease: 'easeOut', delay: i * 0.1 }}
+              >
                 <h3 className="font-semibold text-slate-900">{value.title}</h3>
                 <p className="mt-2 text-sm text-slate-600 leading-relaxed">{value.desc}</p>
-              </div>
+              </motion.div>
             ))}
           </div>
         </div>
       </section>
 
-      {/* Founders */}
+      {/* ── Team ─────────────────────────────────────────────────────────── */}
       <section className="bg-white">
         <div className="mx-auto max-w-5xl px-4 py-24 sm:px-6 lg:px-8">
-          <div className="text-center mb-14">
+          <motion.div
+            className="text-center mb-14"
+            variants={fadeUp}
+            initial="hidden"
+            whileInView="show"
+            viewport={{ once: true, margin: '-40px' }}
+            transition={{ duration: 0.5, ease: 'easeOut' }}
+          >
             <h2 className="text-3xl font-bold text-slate-900">The team</h2>
-          </div>
+          </motion.div>
           <div className="space-y-12">
-            <div className="flex flex-col sm:flex-row gap-8 items-start">
+            <motion.div
+              className="flex flex-col sm:flex-row gap-8 items-start"
+              variants={fadeUp}
+              initial="hidden"
+              whileInView="show"
+              viewport={{ once: true, margin: '-40px' }}
+              transition={{ duration: 0.5, ease: 'easeOut' }}
+            >
               <img
                 src="/team/rob-maclean.jpg"
                 alt="Robert Maclean, CEO of Seven Gen Systems"
@@ -85,12 +140,19 @@ export function About() {
                   Robert Maclean leads Seven Gen Systems with a simple goal: helping organizations use AI to make their work easier and more effective. He focuses on practical systems that reduce busywork, strengthen operations, and deliver results teams can count on.
                 </p>
                 <p className="mt-3 text-slate-600 leading-relaxed">
-                  He believes technology should create real opportunity, not complexity, and works to make AI more accessible, responsible, and useful — especially for communities often left out of new technologies. His approach is grounded in long-term thinking, trust, and accountability.
+                  He believes technology should create real opportunity, not complexity, and works to make AI more accessible, responsible, and useful, especially for communities often left out of new technologies. His approach is grounded in long-term thinking, trust, and accountability.
                 </p>
               </div>
-            </div>
+            </motion.div>
 
-            <div className="border-t border-slate-100 pt-12 flex flex-col sm:flex-row gap-8 items-start">
+            <motion.div
+              className="border-t border-slate-100 pt-12 flex flex-col sm:flex-row gap-8 items-start"
+              variants={fadeUp}
+              initial="hidden"
+              whileInView="show"
+              viewport={{ once: true, margin: '-40px' }}
+              transition={{ duration: 0.5, ease: 'easeOut', delay: 0.1 }}
+            >
               <img
                 src="/team/ben-finnie.jpg"
                 alt="Ben Finnie, Head of Systems & Automation at Seven Gen Systems"
@@ -100,20 +162,27 @@ export function About() {
                 <h3 className="text-xl font-bold text-slate-900">Ben Finnie</h3>
                 <p className="text-sm font-medium text-teal-600 mt-1">Head of Systems & Automation</p>
                 <p className="mt-4 text-slate-600 leading-relaxed">
-                  Ben Finnie leads systems and automation at Seven Gen Systems, designing and implementing AI workflows that solve real operational problems — not experimental or hype-driven use cases.
+                  Ben Finnie leads systems and automation at Seven Gen Systems, designing and implementing AI workflows that solve real operational problems, not experimental or hype-driven use cases.
                 </p>
                 <p className="mt-3 text-slate-600 leading-relaxed">
                   His focus is on building clear, reliable automations that teams can understand, maintain, and trust over time.
                 </p>
               </div>
-            </div>
+            </motion.div>
           </div>
         </div>
       </section>
 
-      {/* CTA */}
-      <section className="bg-teal-700 text-white">
-        <div className="mx-auto max-w-3xl px-4 py-20 sm:px-6 lg:px-8 text-center">
+      {/* ── CTA ──────────────────────────────────────────────────────────── */}
+      <motion.section
+        className="bg-teal-700 text-white"
+        variants={fadeUp}
+        initial="hidden"
+        whileInView="show"
+        viewport={{ once: true, margin: '-40px' }}
+        transition={{ duration: 0.6, ease: 'easeOut' }}
+      >
+        <div className="mx-auto max-w-3xl px-4 py-24 sm:px-6 lg:px-8 text-center">
           <h2 className="text-3xl font-bold">Want to learn more about what we do?</h2>
           <p className="mt-4 text-lg text-teal-100">Let's have a conversation.</p>
           <div className="mt-8">
@@ -125,7 +194,7 @@ export function About() {
             </Link>
           </div>
         </div>
-      </section>
+      </motion.section>
 
     </div>
   )

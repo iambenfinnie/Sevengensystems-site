@@ -1,74 +1,126 @@
 import { Link } from 'react-router-dom'
+import { motion } from 'motion/react'
+
+const fadeUp = {
+  hidden: { opacity: 0, y: 24 },
+  show: { opacity: 1, y: 0 },
+}
 
 export function Learn() {
   return (
     <div>
 
-      {/* Hero */}
-      <section className="bg-slate-900 text-white">
-        <div className="mx-auto max-w-5xl px-4 py-28 sm:px-6 lg:px-8 text-center">
-          <p className="text-teal-400 font-semibold text-sm uppercase tracking-widest mb-4">Learn</p>
-          <h1 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight leading-tight">
+      {/* ── Hero ─────────────────────────────────────────────────────────── */}
+      <section className="relative bg-slate-900 text-white overflow-hidden">
+        <div className="hero-grid absolute inset-0 pointer-events-none" aria-hidden="true" />
+        <div className="relative mx-auto max-w-5xl px-4 py-28 sm:px-6 lg:px-8 text-center">
+          <motion.p
+            className="text-teal-400 font-semibold text-sm uppercase tracking-widest mb-4"
+            initial={{ opacity: 0, y: 16 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5, ease: 'easeOut' }}
+          >
+            Learn
+          </motion.p>
+          <motion.h1
+            className="text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight leading-tight"
+            initial={{ opacity: 0, y: 32 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, ease: 'easeOut', delay: 0.08 }}
+          >
             Your Team Can Use AI.<br className="hidden sm:block" /> We'll Show Them How.
-          </h1>
-          <p className="mt-6 text-lg sm:text-xl text-slate-300 max-w-2xl mx-auto leading-relaxed">
-            Practical, hands-on AI workshops for businesses and organizations — no tech background required, no jargon, just real skills your team can use starting Monday.
-          </p>
-          <div className="mt-10">
+          </motion.h1>
+          <motion.p
+            className="mt-6 text-lg sm:text-xl text-slate-300 max-w-2xl mx-auto leading-relaxed"
+            initial={{ opacity: 0, y: 24 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, ease: 'easeOut', delay: 0.18 }}
+          >
+            Practical, hands-on AI workshops for businesses and organizations. No tech background required, no jargon, just real skills your team can use starting Monday.
+          </motion.p>
+          <motion.div
+            className="mt-10"
+            initial={{ opacity: 0, y: 16 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5, ease: 'easeOut', delay: 0.3 }}
+          >
             <Link
               to="/contact"
               className="inline-flex items-center px-8 py-4 text-base font-semibold rounded-lg bg-teal-600 text-white hover:bg-teal-500 transition-colors"
             >
               Book a Free Discovery Call
             </Link>
-          </div>
+          </motion.div>
         </div>
       </section>
 
-      {/* Grants callout */}
-      <section className="bg-teal-50 border-y border-teal-100">
+      {/* ── Grants Callout ───────────────────────────────────────────────── */}
+      <motion.section
+        className="bg-teal-50 border-y border-teal-100"
+        variants={fadeUp}
+        initial="hidden"
+        whileInView="show"
+        viewport={{ once: true, margin: '-20px' }}
+        transition={{ duration: 0.5, ease: 'easeOut' }}
+      >
         <div className="mx-auto max-w-4xl px-4 py-12 sm:px-6 lg:px-8 text-center">
           <p className="text-teal-800 font-semibold text-lg">
             Many organizations can fund AI workshops through existing grants.
           </p>
           <p className="mt-2 text-teal-700 text-sm leading-relaxed max-w-xl mx-auto">
-            Whether it's workforce development funding, digital adoption programs, or industry-specific grants — there's a good chance your training doesn't have to come out of your operating budget. Ask us about options on your discovery call.
+            Whether it's workforce development funding, digital adoption programs, or industry-specific grants, there's a good chance your training doesn't have to come out of your operating budget. Ask us about options on your discovery call.
           </p>
         </div>
-      </section>
+      </motion.section>
 
-      {/* Who This Is For */}
+      {/* ── Who This Is For ──────────────────────────────────────────────── */}
       <section className="bg-white">
         <div className="mx-auto max-w-3xl px-4 py-24 sm:px-6 lg:px-8 text-center">
-          <h2 className="text-3xl sm:text-4xl font-bold text-slate-900">
-            Built for real teams, not just tech people.
-          </h2>
-          <p className="mt-6 text-lg text-slate-600 leading-relaxed">
-            Our workshops are designed for the people in your business who actually do the work — managers, coordinators, customer service reps, operations staff. No coding. No jargon. Just practical skills that save time and improve results.
-          </p>
-          <p className="mt-4 text-slate-600 leading-relaxed">
-            We adapt every workshop to your industry, your tools, and your real workflows. By the end of the session, your team won't just know about AI — they'll know how to use it.
-          </p>
+          <motion.div
+            variants={fadeUp}
+            initial="hidden"
+            whileInView="show"
+            viewport={{ once: true, margin: '-40px' }}
+            transition={{ duration: 0.5, ease: 'easeOut' }}
+          >
+            <h2 className="text-3xl sm:text-4xl font-bold text-slate-900">
+              Built for real teams, not just tech people.
+            </h2>
+            <p className="mt-6 text-lg text-slate-600 leading-relaxed">
+              Our workshops are designed for the people in your business who actually do the work: managers, coordinators, customer service reps, operations staff. No coding. No jargon. Just practical skills that save time and improve results.
+            </p>
+            <p className="mt-4 text-slate-600 leading-relaxed">
+              We adapt every workshop to your industry, your tools, and your real workflows. By the end of the session, your team won't just know about AI. They'll know how to use it.
+            </p>
+          </motion.div>
         </div>
       </section>
 
-      {/* Training Tiers */}
+      {/* ── Training Tiers ───────────────────────────────────────────────── */}
       <section className="bg-slate-50">
         <div className="mx-auto max-w-5xl px-4 py-24 sm:px-6 lg:px-8">
-          <div className="text-center mb-14">
+          <motion.div
+            className="text-center mb-14"
+            variants={fadeUp}
+            initial="hidden"
+            whileInView="show"
+            viewport={{ once: true, margin: '-40px' }}
+            transition={{ duration: 0.5, ease: 'easeOut' }}
+          >
             <h2 className="text-3xl sm:text-4xl font-bold text-slate-900">Three levels of training</h2>
             <p className="mt-4 text-slate-600 max-w-2xl mx-auto">
               Start where your team is. Scale from there.
             </p>
-          </div>
+          </motion.div>
           <div className="grid gap-8 sm:grid-cols-3">
             {[
               {
                 tier: 'Tier 1',
                 title: 'Foundations',
                 subtitle: 'Best for teams new to AI',
+                featured: false,
                 features: [
-                  'What AI is — and what it isn\'t',
+                  "What AI is and what it isn't",
                   'Where it fits into your day-to-day work',
                   'How to use it without making mistakes',
                   'Real examples from your industry',
@@ -79,6 +131,7 @@ export function Learn() {
                 tier: 'Tier 2',
                 title: 'Applied AI',
                 subtitle: 'Best for teams ready to build habits',
+                featured: true,
                 features: [
                   'Everything in Tier 1',
                   'Hands-on exercises with real tools',
@@ -91,6 +144,7 @@ export function Learn() {
                 tier: 'Tier 3',
                 title: 'Embedded Enablement',
                 subtitle: 'Best for organizations going all-in',
+                featured: false,
                 features: [
                   'Everything in Tiers 1 & 2',
                   'Internal AI champion development',
@@ -99,12 +153,21 @@ export function Learn() {
                   'Follow-up sessions as you scale',
                 ],
               },
-            ].map((tier, idx) => (
-              <div
+            ].map((tier, i) => (
+              <motion.div
                 key={tier.tier}
-                className={`rounded-xl border p-8 ${idx === 1 ? 'border-teal-400 bg-white shadow-md' : 'border-slate-200 bg-white'}`}
+                className={`rounded-xl border p-8 hover:shadow-lg hover:-translate-y-1.5 transition-all duration-300 cursor-default ${
+                  tier.featured
+                    ? 'border-teal-400 bg-white shadow-md'
+                    : 'border-slate-200 bg-white hover:border-teal-300'
+                }`}
+                variants={fadeUp}
+                initial="hidden"
+                whileInView="show"
+                viewport={{ once: true, margin: '-40px' }}
+                transition={{ duration: 0.5, ease: 'easeOut', delay: i * 0.1 }}
               >
-                {idx === 1 && (
+                {tier.featured && (
                   <span className="inline-block bg-teal-600 text-white text-xs font-bold uppercase tracking-widest px-3 py-1 rounded-full mb-4">
                     Most Popular
                   </span>
@@ -124,24 +187,31 @@ export function Learn() {
                     </li>
                   ))}
                 </ul>
-              </div>
+              </motion.div>
             ))}
           </div>
         </div>
       </section>
 
-      {/* What to Expect */}
+      {/* ── What to Expect ───────────────────────────────────────────────── */}
       <section className="bg-white">
         <div className="mx-auto max-w-5xl px-4 py-24 sm:px-6 lg:px-8">
-          <div className="text-center mb-14">
+          <motion.div
+            className="text-center mb-14"
+            variants={fadeUp}
+            initial="hidden"
+            whileInView="show"
+            viewport={{ once: true, margin: '-40px' }}
+            transition={{ duration: 0.5, ease: 'easeOut' }}
+          >
             <h2 className="text-3xl sm:text-4xl font-bold text-slate-900">What to expect</h2>
-          </div>
+          </motion.div>
           <div className="grid gap-12 sm:grid-cols-3 text-center">
             {[
               {
                 number: '01',
                 title: 'We Learn Your Context',
-                desc: "Before we build anything, we understand your organization — your team, your tools, and where AI would make the biggest difference.",
+                desc: "Before we build anything, we understand your organization: your team, your tools, and where AI would make the biggest difference.",
               },
               {
                 number: '02',
@@ -153,28 +223,42 @@ export function Learn() {
                 title: 'We Deliver & Stay Available',
                 desc: "We run the session and make sure your team leaves confident. We're available after the fact to answer questions as they start using what they've learned.",
               },
-            ].map((step) => (
-              <div key={step.number}>
+            ].map((step, i) => (
+              <motion.div
+                key={step.number}
+                variants={fadeUp}
+                initial="hidden"
+                whileInView="show"
+                viewport={{ once: true, margin: '-40px' }}
+                transition={{ duration: 0.5, ease: 'easeOut', delay: i * 0.12 }}
+              >
                 <div className="text-5xl font-extrabold text-teal-200">{step.number}</div>
                 <h3 className="mt-4 text-lg font-semibold text-slate-900">{step.title}</h3>
                 <p className="mt-2 text-sm text-slate-600 leading-relaxed">{step.desc}</p>
-              </div>
+              </motion.div>
             ))}
           </div>
         </div>
       </section>
 
-      {/* Who We Work With */}
+      {/* ── Who We Train ─────────────────────────────────────────────────── */}
       <section className="bg-slate-50">
         <div className="mx-auto max-w-5xl px-4 py-24 sm:px-6 lg:px-8">
-          <div className="text-center mb-12">
+          <motion.div
+            className="text-center mb-14"
+            variants={fadeUp}
+            initial="hidden"
+            whileInView="show"
+            viewport={{ once: true, margin: '-40px' }}
+            transition={{ duration: 0.5, ease: 'easeOut' }}
+          >
             <h2 className="text-3xl sm:text-4xl font-bold text-slate-900">Who we train</h2>
-          </div>
+          </motion.div>
           <div className="grid gap-6 sm:grid-cols-2">
             {[
               {
                 name: 'Small & Mid-size Businesses',
-                desc: 'Owners and teams who want to use AI to work smarter — without hiring a data scientist or spending months on implementation.',
+                desc: 'Owners and teams who want to use AI to work smarter, without hiring a data scientist or spending months on implementation.',
               },
               {
                 name: 'Nonprofits & Training Organizations',
@@ -182,24 +266,39 @@ export function Learn() {
               },
               {
                 name: 'Government Departments',
-                desc: 'Public-sector teams responsible for program delivery or digital modernization — with clear, accountable outcomes.',
+                desc: 'Public-sector teams responsible for program delivery or digital modernization, with clear, accountable outcomes.',
               },
               {
                 name: 'Indigenous Organizations & Band Councils',
                 desc: 'Community programs and economic development teams. We bring cultural awareness and genuine respect for self-determination.',
               },
-            ].map((org) => (
-              <div key={org.name} className="rounded-xl border border-slate-200 bg-white p-7">
+            ].map((org, i) => (
+              <motion.div
+                key={org.name}
+                className="rounded-xl border border-slate-200 bg-white p-7"
+                variants={fadeUp}
+                initial="hidden"
+                whileInView="show"
+                viewport={{ once: true, margin: '-40px' }}
+                transition={{ duration: 0.5, ease: 'easeOut', delay: i * 0.1 }}
+              >
                 <h3 className="font-semibold text-slate-900">{org.name}</h3>
                 <p className="mt-2 text-sm text-slate-600 leading-relaxed">{org.desc}</p>
-              </div>
+              </motion.div>
             ))}
           </div>
         </div>
       </section>
 
-      {/* CTA */}
-      <section className="bg-teal-700 text-white">
+      {/* ── CTA ──────────────────────────────────────────────────────────── */}
+      <motion.section
+        className="bg-teal-700 text-white"
+        variants={fadeUp}
+        initial="hidden"
+        whileInView="show"
+        viewport={{ once: true, margin: '-40px' }}
+        transition={{ duration: 0.6, ease: 'easeOut' }}
+      >
         <div className="mx-auto max-w-3xl px-4 py-24 sm:px-6 lg:px-8 text-center">
           <h2 className="text-3xl sm:text-4xl font-bold">
             Ready to bring AI training to your team?
@@ -216,7 +315,7 @@ export function Learn() {
             </Link>
           </div>
         </div>
-      </section>
+      </motion.section>
 
     </div>
   )
