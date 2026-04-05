@@ -145,17 +145,17 @@ export function Home() {
             animate={{ opacity: 1 }}
             transition={{ duration: 0.4, delay: 0.3 }}
           >
-            <span className="relative flex w-full justify-center overflow-hidden pb-2 pt-1">
+            <span className="relative flex w-full justify-center overflow-hidden h-24 sm:h-auto pb-2 pt-1">
               &nbsp;
               {rotatingPhrases.map((phrase, index) => (
                 <motion.span
                   key={index}
-                  className="absolute text-teal-400 whitespace-nowrap"
-                  initial={{ opacity: 0, y: 60 }}
+                  className="absolute text-teal-400 w-full text-center"
+                  initial={{ opacity: 0, y: 100 }}
                   animate={
                     phraseIndex === index
                       ? { opacity: 1, y: 0 }
-                      : { opacity: 0, y: phraseIndex > index ? -60 : 60 }
+                      : { opacity: 0, y: phraseIndex > index ? -100 : 100 }
                   }
                   transition={{ type: 'spring', stiffness: 55, damping: 18 }}
                 >
@@ -257,7 +257,7 @@ export function Home() {
       </section>
 
       {/* ── Scroll Reveal ────────────────────────────────────────────────── */}
-      <section className="bg-white overflow-hidden">
+      <section className="bg-white overflow-x-hidden">
         <ContainerScroll
           titleComponent={
             <div className="text-center px-4">
