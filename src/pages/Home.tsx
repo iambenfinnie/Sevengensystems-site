@@ -9,7 +9,7 @@ import { AnimatedTestimonials } from '@/components/ui/animated-testimonials'
 // Rotating hero phrases — cycles through Seven Gen's three service pillars
 // ---------------------------------------------------------------------------
 const rotatingPhrases = [
-  'We build custom AI tools for you.',
+  'We build it into your business.',
   'We automate your workflows.',
   'We train your whole team.',
   'We grow your client pipeline.',
@@ -224,7 +224,7 @@ export function Home() {
               rel="noopener noreferrer"
               className="text-teal-400 hover:text-teal-300 underline underline-offset-2 decoration-teal-800 hover:decoration-teal-600 transition-colors"
             >
-              IBD Certified
+              IBD Verified
             </a>
           </div>
         </div>
@@ -283,7 +283,7 @@ export function Home() {
                 desc: 'We build the tools that make your business easier to find, trust, and buy from.',
                 color: 'text-teal-400',
                 bg: 'bg-teal-900/30 border-teal-800/50',
-                items: ['AI-powered lead intake & follow-up', 'Custom websites built to convert', 'Content creation systems', 'Market demand research & dashboards'],
+                items: ['AI-powered lead intake & follow-up', 'Custom websites built to convert', 'Market intelligence dashboards', 'Content creation systems', 'AI-powered SEO & growth', 'Growth strategy & advisory'],
               },
               {
                 icon: Zap,
@@ -292,7 +292,7 @@ export function Home() {
                 desc: 'We replace manual busywork with intelligent systems that run while you sleep.',
                 color: 'text-cyan-400',
                 bg: 'bg-cyan-900/30 border-cyan-800/50',
-                items: ['Workflow automation (quoting, scheduling, reporting)', 'AI voice agents for intake & customer service', 'CRM setup & integration', 'Custom AI tools built for your operation'],
+                items: ['AI voice agents & receptionists', 'Workflow automation (quoting, scheduling, invoicing)', 'CRM setup & integration', 'Custom AI tools built for your operation', 'Document processing & extraction', 'AI strategy & implementation consulting'],
               },
               {
                 icon: GraduationCap,
@@ -301,7 +301,7 @@ export function Home() {
                 desc: 'We give your people practical AI skills — not theory, but tools they\'ll use Monday morning.',
                 color: 'text-emerald-400',
                 bg: 'bg-emerald-900/30 border-emerald-800/50',
-                items: ['AI Foundations workshop', 'Applied AI for your industry', 'Ongoing team enablement', 'Grant-funded options available'],
+                items: ['AI Foundations workshop', 'Applied AI for your industry', 'Ongoing team enablement', 'White-label workshops for creators & associations', 'Grant-funded program design (Canada Job Grant, WIPSI)', 'AI readiness assessments'],
               },
             ].map((service) => (
               <div
@@ -422,7 +422,7 @@ export function Home() {
       />
 
       {/* ── How It Works ─────────────────────────────────────────────────── */}
-      <section className="bg-white">
+      <section className="bg-slate-900 text-white">
         <div className="mx-auto max-w-5xl px-4 py-24 sm:px-6 lg:px-8">
           <motion.div
             className="text-center mb-14"
@@ -432,38 +432,155 @@ export function Home() {
             viewport={{ once: true, margin: '-40px' }}
             transition={{ duration: 0.5, ease: 'easeOut' }}
           >
-            <h2 className="text-3xl sm:text-4xl font-bold text-slate-900">Simple process. Real outcomes.</h2>
+            <p className="text-xs font-bold text-teal-400 uppercase tracking-widest mb-3">HOW IT WORKS</p>
+            <h2 className="text-3xl sm:text-4xl font-bold">Simple process. Real outcomes.</h2>
+            <p className="mt-4 text-slate-400 max-w-2xl mx-auto leading-relaxed">
+              Every engagement follows the same four steps — whether we're building a $5K voice agent or a six-figure custom system.
+            </p>
           </motion.div>
-          <div className="grid gap-12 sm:grid-cols-3 text-center">
+          <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
             {[
               {
                 number: '01',
-                title: 'Discovery Call',
-                desc: 'We learn how your business works, where the friction is, and what AI can realistically do for you. No commitment required.',
+                title: 'Discovery',
+                desc: "A free 30-minute call to understand your business, your bottlenecks, and where AI actually fits. No pitch, no commitment.",
               },
               {
                 number: '02',
-                title: 'Custom Plan',
-                desc: "You get a clear scope: what we'll build or teach, what it costs, and what you can expect on the other side.",
+                title: 'Scope',
+                desc: "You see exactly what we'll build, what it costs, and what success looks like — before anyone signs anything.",
               },
               {
                 number: '03',
-                title: 'Delivery & Support',
-                desc: "We execute and stay involved until it's working. You walk away confident, not confused.",
+                title: 'Build',
+                desc: "We build, test, and integrate with your existing tools. You see progress every week, not just at the end.",
+              },
+              {
+                number: '04',
+                title: 'Adopt',
+                desc: "We train your team, monitor what we built, and stay involved until it's running smoothly without us.",
               },
             ].map((step, i) => (
               <motion.div
                 key={step.number}
+                className="rounded-xl border border-slate-700 bg-slate-800 p-7"
                 variants={fadeUp}
                 initial="hidden"
                 whileInView="show"
                 viewport={{ once: true, margin: '-40px' }}
-                transition={{ duration: 0.5, ease: 'easeOut', delay: i * 0.12 }}
+                transition={{ duration: 0.5, ease: 'easeOut', delay: i * 0.1 }}
               >
-                <div className="text-5xl font-extrabold text-teal-200">{step.number}</div>
-                <h3 className="mt-4 text-lg font-semibold text-slate-900">{step.title}</h3>
-                <p className="mt-2 text-sm text-slate-600 leading-relaxed">{step.desc}</p>
+                <div className="text-4xl font-extrabold text-teal-400 mb-4">{step.number}</div>
+                <h3 className="text-lg font-semibold text-white">{step.title}</h3>
+                <p className="mt-2 text-sm text-slate-400 leading-relaxed">{step.desc}</p>
               </motion.div>
+            ))}
+          </div>
+          <motion.div
+            className="mt-12 text-center"
+            variants={fadeUp}
+            initial="hidden"
+            whileInView="show"
+            viewport={{ once: true, margin: '-40px' }}
+            transition={{ duration: 0.5, ease: 'easeOut', delay: 0.45 }}
+          >
+            <Link
+              to="/contact"
+              className="inline-flex items-center justify-center gap-2 px-8 py-4 text-base font-semibold rounded-lg bg-teal-600 text-white hover:bg-teal-500 transition-colors"
+            >
+              <PhoneCall className="w-4 h-4" />
+              Book a Free Discovery Call
+            </Link>
+          </motion.div>
+        </div>
+      </section>
+
+      {/* ── Case Study ───────────────────────────────────────────────────── */}
+      <section className="bg-slate-800">
+        <div className="mx-auto max-w-5xl px-4 py-24 sm:px-6 lg:px-8">
+          <motion.div
+            className="text-center mb-14"
+            variants={fadeUp}
+            initial="hidden"
+            whileInView="show"
+            viewport={{ once: true, margin: '-40px' }}
+            transition={{ duration: 0.5, ease: 'easeOut' }}
+          >
+            <p className="text-xs font-bold text-teal-400 uppercase tracking-widest mb-3">CASE STUDY</p>
+            <h2 className="text-3xl sm:text-4xl font-bold text-white">Real work. Real results.</h2>
+          </motion.div>
+          <motion.div
+            className="max-w-2xl mx-auto rounded-xl border border-slate-700 bg-slate-900 overflow-hidden"
+            variants={fadeUp}
+            initial="hidden"
+            whileInView="show"
+            viewport={{ once: true, margin: '-40px' }}
+            transition={{ duration: 0.5, ease: 'easeOut', delay: 0.1 }}
+          >
+            <div className="h-48 bg-slate-700/60 border-b border-slate-700 flex items-center justify-center">
+              <span className="text-slate-500 text-sm">Bush Busters — image coming</span>
+            </div>
+            <div className="p-8">
+              <div className="flex flex-wrap gap-2 mb-4">
+                {['Market Intelligence', 'AI Dashboard', 'Lead Generation'].map((tag) => (
+                  <span key={tag} className="text-xs font-semibold px-3 py-1 rounded-full bg-teal-900/60 text-teal-300 border border-teal-800/60">
+                    {tag}
+                  </span>
+                ))}
+              </div>
+              <h3 className="text-xl font-bold text-white">How Bush Busters built a market demand engine with AI</h3>
+              <p className="mt-3 text-slate-400 leading-relaxed text-sm">
+                A custom AI dashboard that surfaces high-intent land clearing opportunities in real time. Pulls from public permit data, weather, satellite imagery, and proprietary signals — turning cold outreach into inbound demand.
+              </p>
+              <p className="mt-4 text-sm font-semibold text-teal-400">From cold outreach to qualified inbound</p>
+              <a
+                href="#"
+                className="mt-5 inline-flex items-center gap-1 text-sm font-semibold text-teal-400 hover:text-teal-300 transition-colors"
+              >
+                Read the case study <ArrowRight className="w-4 h-4" />
+              </a>
+            </div>
+          </motion.div>
+        </div>
+      </section>
+
+      {/* ── Built With ───────────────────────────────────────────────────── */}
+      <section className="bg-slate-900 border-y border-white/[0.05] py-12">
+        <div className="mx-auto max-w-5xl px-4 sm:px-6 lg:px-8 mb-8 text-center">
+          <p className="text-xs font-bold text-slate-500 uppercase tracking-widest">BUILT WITH</p>
+        </div>
+        <div className="marquee-container">
+          <div className="marquee-track">
+            {[
+              { src: '/logos/openai.svg', alt: 'OpenAI' },
+              { src: '/logos/anthropic.svg', alt: 'Anthropic' },
+              { src: '/logos/twilio.svg', alt: 'Twilio' },
+              { src: '/logos/vapi.svg', alt: 'Vapi' },
+              { src: '/logos/make.svg', alt: 'Make' },
+              { src: '/logos/n8n.svg', alt: 'n8n' },
+              { src: '/logos/notion.svg', alt: 'Notion' },
+              { src: '/logos/stripe.svg', alt: 'Stripe' },
+              { src: '/logos/google.svg', alt: 'Google' },
+              { src: '/logos/slack.svg', alt: 'Slack' },
+              { src: '/logos/vercel.svg', alt: 'Vercel' },
+              { src: '/logos/openai.svg', alt: 'OpenAI' },
+              { src: '/logos/anthropic.svg', alt: 'Anthropic' },
+              { src: '/logos/twilio.svg', alt: 'Twilio' },
+              { src: '/logos/vapi.svg', alt: 'Vapi' },
+              { src: '/logos/make.svg', alt: 'Make' },
+              { src: '/logos/n8n.svg', alt: 'n8n' },
+              { src: '/logos/notion.svg', alt: 'Notion' },
+              { src: '/logos/stripe.svg', alt: 'Stripe' },
+              { src: '/logos/google.svg', alt: 'Google' },
+              { src: '/logos/slack.svg', alt: 'Slack' },
+              { src: '/logos/vercel.svg', alt: 'Vercel' },
+            ].map((logo, i) => (
+              <img
+                key={i}
+                src={logo.src}
+                alt={logo.alt}
+                className="h-8 w-auto opacity-50 flex-shrink-0"
+              />
             ))}
           </div>
         </div>

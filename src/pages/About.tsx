@@ -48,10 +48,10 @@ export function About() {
             <div className="text-xs font-bold text-teal-600 uppercase tracking-widest mb-4">Our Name</div>
             <h2 className="text-3xl font-bold text-slate-900">The Seven Generations principle</h2>
             <p className="mt-5 text-slate-600 leading-relaxed">
-              Our name comes from an Indigenous governance principle: decisions today should
-              account for their impact seven generations forward. For us that means we build
-              things that last. Systems your team can understand, maintain, and own. We
-              do not recommend technology we would not trust to hold up over time.
+              <strong>The Seven Generations principle is an Indigenous teaching that asks us to consider the impact of our decisions on the seven generations to come.</strong> It's the foundation of how we work — build for the long term, leave things stronger than we found them, and stay accountable for every system we ship.
+            </p>
+            <p className="mt-4 text-slate-600 leading-relaxed">
+              Seven Gen Systems is an Indigenous-majority-owned AI company founded by Robert Maclean (Eskasoni First Nation, CEO) and Ben Finnie (Head of Technology). We hold IBD and CCIB certification, which makes Seven Gen eligible as a prime contractor on federal Indigenous procurement contracts and qualifies many clients for Canada Job Grant and other grant-funded engagements.
             </p>
           </motion.div>
         </div>
