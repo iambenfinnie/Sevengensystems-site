@@ -181,7 +181,7 @@ export function About() {
               <img
                 src="/team/jane-ward.jpg"
                 alt="Jane Ward, AI Receptionist & Client Success at Seven Gen Systems"
-                className="w-40 h-40 rounded-2xl object-cover object-center flex-shrink-0 shadow-sm"
+                className="w-40 h-40 rounded-2xl object-cover object-[center_15%] flex-shrink-0 shadow-sm"
               />
               <div>
                 <h3 className="text-xl font-bold text-slate-900">Jane Ward</h3>
