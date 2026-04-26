@@ -178,11 +178,13 @@ export function About() {
               viewport={{ once: true, margin: '-40px' }}
               transition={{ duration: 0.5, ease: 'easeOut', delay: 0.2 }}
             >
-              <img
-                src="/team/jane-ward.jpg"
-                alt="Jane Ward, AI Receptionist & Client Success at Seven Gen Systems"
-                className="w-40 h-40 rounded-2xl object-cover object-[center_15%] flex-shrink-0 shadow-sm"
-              />
+              <div className="w-40 h-40 rounded-2xl overflow-hidden flex-shrink-0 shadow-sm">
+                <img
+                  src="/team/jane-ward.jpg"
+                  alt="Jane Ward, AI Receptionist & 24/7 Customer Support at Seven Gen Systems"
+                  className="w-full h-full object-cover object-[center_10%] scale-125"
+                />
+              </div>
               <div>
                 <h3 className="text-xl font-bold text-slate-900">Jane Ward</h3>
                 <p className="text-sm font-medium text-teal-600 mt-1">AI Receptionist & 24/7 Customer Support</p>
