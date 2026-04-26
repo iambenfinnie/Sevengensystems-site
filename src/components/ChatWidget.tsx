@@ -9,7 +9,7 @@ interface Message {
 
 const GREETING: Message = {
   role: 'assistant',
-  content: "Hi there! I'm the Seven Gen Systems assistant. I can answer questions about our services, help you figure out if we're a good fit, or point you toward booking a call. What brings you here today?",
+  content: "Hi there! I'm Jane, the Seven Gen Systems assistant. I can answer questions about our services, help you figure out if we're a good fit, or point you toward booking a call. What brings you here today?",
 }
 
 export function ChatWidget() {
@@ -80,7 +80,7 @@ export function ChatWidget() {
           {/* Header */}
           <div className="flex items-center justify-between px-4 py-3 bg-teal-700 text-white">
             <div>
-              <p className="font-semibold text-sm leading-tight">Seven Gen Systems</p>
+              <p className="font-semibold text-sm leading-tight">Jane — Seven Gen Systems</p>
               <p className="text-xs text-teal-200">Usually replies in seconds</p>
             </div>
             <button
