@@ -495,55 +495,6 @@ export function Home() {
         </div>
       </section>
 
-      {/* ── Case Study ───────────────────────────────────────────────────── */}
-      <section className="bg-slate-800">
-        <div className="mx-auto max-w-5xl px-4 py-24 sm:px-6 lg:px-8">
-          <motion.div
-            className="text-center mb-14"
-            variants={fadeUp}
-            initial="hidden"
-            whileInView="show"
-            viewport={{ once: true, margin: '-40px' }}
-            transition={{ duration: 0.5, ease: 'easeOut' }}
-          >
-            <p className="text-xs font-bold text-teal-400 uppercase tracking-widest mb-3">CASE STUDY</p>
-            <h2 className="text-3xl sm:text-4xl font-bold text-white">Real work. Real results.</h2>
-          </motion.div>
-          <motion.div
-            className="max-w-2xl mx-auto rounded-xl border border-slate-700 bg-slate-900 overflow-hidden"
-            variants={fadeUp}
-            initial="hidden"
-            whileInView="show"
-            viewport={{ once: true, margin: '-40px' }}
-            transition={{ duration: 0.5, ease: 'easeOut', delay: 0.1 }}
-          >
-            <div className="h-48 bg-slate-700/60 border-b border-slate-700 flex items-center justify-center">
-              <span className="text-slate-500 text-sm">Bush Busters — image coming</span>
-            </div>
-            <div className="p-8">
-              <div className="flex flex-wrap gap-2 mb-4">
-                {['Market Intelligence', 'AI Dashboard', 'Lead Generation'].map((tag) => (
-                  <span key={tag} className="text-xs font-semibold px-3 py-1 rounded-full bg-teal-900/60 text-teal-300 border border-teal-800/60">
-                    {tag}
-                  </span>
-                ))}
-              </div>
-              <h3 className="text-xl font-bold text-white">How Bush Busters built a market demand engine with AI</h3>
-              <p className="mt-3 text-slate-400 leading-relaxed text-sm">
-                A custom AI dashboard that surfaces high-intent land clearing opportunities in real time. Pulls from public permit data, weather, satellite imagery, and proprietary signals — turning cold outreach into inbound demand.
-              </p>
-              <p className="mt-4 text-sm font-semibold text-teal-400">From cold outreach to qualified inbound</p>
-              <a
-                href="#"
-                className="mt-5 inline-flex items-center gap-1 text-sm font-semibold text-teal-400 hover:text-teal-300 transition-colors"
-              >
-                Read the case study <ArrowRight className="w-4 h-4" />
-              </a>
-            </div>
-          </motion.div>
-        </div>
-      </section>
-
       {/* ── Built With ───────────────────────────────────────────────────── */}
       <section className="bg-slate-900 border-y border-white/[0.05] py-12">
         <div className="mx-auto max-w-5xl px-4 sm:px-6 lg:px-8 mb-8 text-center">
