@@ -10,6 +10,7 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@anthropic-ai/sdk": "^0.91.1",
     "@radix-ui/react-avatar": "^1.1.11",
     "@radix-ui/react-separator": "^1.1.8",
     "@vercel/node": "^5.6.4",
