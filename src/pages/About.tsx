@@ -169,6 +169,31 @@ export function About() {
                 </p>
               </div>
             </motion.div>
+
+            <motion.div
+              className="border-t border-slate-100 pt-12 flex flex-col sm:flex-row gap-8 items-start"
+              variants={fadeUp}
+              initial="hidden"
+              whileInView="show"
+              viewport={{ once: true, margin: '-40px' }}
+              transition={{ duration: 0.5, ease: 'easeOut', delay: 0.2 }}
+            >
+              <img
+                src="/team/jane-ward.jpg"
+                alt="Jane Ward, AI Receptionist & Client Success at Seven Gen Systems"
+                className="w-40 h-40 rounded-2xl object-cover object-center flex-shrink-0 shadow-sm"
+              />
+              <div>
+                <h3 className="text-xl font-bold text-slate-900">Jane Ward</h3>
+                <p className="text-sm font-medium text-teal-600 mt-1">AI Receptionist & Client Success</p>
+                <p className="mt-4 text-slate-600 leading-relaxed">
+                  Jane is Seven Gen Systems' first point of contact. She handles incoming inquiries, answers questions about workshops and services, routes leads to the right person, and makes sure nothing falls through the cracks.
+                </p>
+                <p className="mt-3 text-slate-600 leading-relaxed">
+                  She's available around the clock so organizations can get the information they need without waiting on a calendar.
+                </p>
+              </div>
+            </motion.div>
           </div>
         </div>
       </section>
