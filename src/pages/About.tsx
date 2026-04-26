@@ -185,12 +185,12 @@ export function About() {
               />
               <div>
                 <h3 className="text-xl font-bold text-slate-900">Jane Ward</h3>
-                <p className="text-sm font-medium text-teal-600 mt-1">AI Receptionist & Client Success</p>
+                <p className="text-sm font-medium text-teal-600 mt-1">AI Receptionist & 24/7 Customer Support</p>
                 <p className="mt-4 text-slate-600 leading-relaxed">
                   Jane is Seven Gen Systems' first point of contact. She handles incoming inquiries, answers questions about workshops and services, routes leads to the right person, and makes sure nothing falls through the cracks.
                 </p>
                 <p className="mt-3 text-slate-600 leading-relaxed">
-                  She's available around the clock so organizations can get the information they need without waiting on a calendar.
+                  She's available around the clock so you can get the information you need without waiting on a calendar.
                 </p>
               </div>
             </motion.div>
