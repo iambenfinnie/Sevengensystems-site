@@ -28,3 +28,4 @@ dist-ssr/
 # Never allow compiled JS in src (TypeScript project)
 src/**/*.js
 src/**/*.js.map
+.vercel
