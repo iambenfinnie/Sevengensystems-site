@@ -3,7 +3,7 @@ export function Logo() {
     <div className="flex items-center gap-2">
       <div className="h-11 w-11 flex-shrink-0 overflow-hidden mt-2">
         <img
-          src="/Seven Gen Leaf Favicon.png"
+          src="/favicon.png"
           alt=""
           className="h-[170%] w-[170%] object-cover -translate-x-[20%] -translate-y-[20%]"
           style={{ mixBlendMode: 'multiply' }}

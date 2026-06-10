@@ -1,9 +1,10 @@
+'use client'
 import { useState, FormEvent } from 'react'
 import { motion } from 'motion/react'
 
 const EMPTY_FORM = { name: '', email: '', organization: '', message: '' }
 
-export function Contact() {
+export function ContactContent() {
   const [formData, setFormData] = useState(EMPTY_FORM)
   const [status, setStatus] = useState<'idle' | 'loading' | 'success' | 'error'>('idle')
   const [errorMessage, setErrorMessage] = useState('')

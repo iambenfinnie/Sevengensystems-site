@@ -1,5 +1,8 @@
+'use client'
+
 import { useState } from 'react'
-import { Link, NavLink } from 'react-router-dom'
+import Link from 'next/link'
+import { usePathname } from 'next/navigation'
 import { motion, AnimatePresence } from 'motion/react'
 import { Logo } from './Logo'
 
@@ -12,39 +15,40 @@ const navLinks = [
 
 export function Navigation() {
   const [mobileOpen, setMobileOpen] = useState(false)
+  const pathname = usePathname()
+
+  const isActive = (to: string) => pathname === to || pathname?.startsWith(`${to}/`)
 
   return (
     <nav className="bg-white border-b border-slate-200 sticky top-0 z-50">
       <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
         <div className="flex h-16 items-center justify-between md:grid md:grid-cols-3">
           {/* Logo */}
-          <Link to="/" className="flex items-center flex-shrink-0">
+          <Link href="/" className="flex items-center flex-shrink-0">
             <Logo />
           </Link>
 
           {/* Center nav links — truly centered via grid */}
           <div className="hidden md:flex items-center justify-center space-x-8">
             {navLinks.map((link) => (
-              <NavLink
+              <Link
                 key={link.to}
-                to={link.to}
-                className={({ isActive }) =>
-                  `text-sm font-medium transition-colors ${
-                    isActive
-                      ? 'text-teal-600 border-b-2 border-teal-600 pb-0.5'
-                      : 'text-slate-600 hover:text-slate-900'
-                  }`
-                }
+                href={link.to}
+                className={`text-sm font-medium transition-colors ${
+                  isActive(link.to)
+                    ? 'text-teal-600 border-b-2 border-teal-600 pb-0.5'
+                    : 'text-slate-600 hover:text-slate-900'
+                }`}
               >
                 {link.label}
-              </NavLink>
+              </Link>
             ))}
           </div>
 
           {/* CTA button */}
           <div className="hidden md:flex justify-end">
             <Link
-              to="/contact"
+              href="/contact"
               className="inline-flex items-center px-5 py-2 text-sm font-semibold rounded-lg bg-teal-600 text-white hover:bg-teal-500 transition-colors"
             >
               Book a Call
@@ -81,23 +85,21 @@ export function Navigation() {
           >
             <div className="px-4 py-3 space-y-1">
               {navLinks.map((link) => (
-                <NavLink
+                <Link
                   key={link.to}
-                  to={link.to}
+                  href={link.to}
                   onClick={() => setMobileOpen(false)}
-                  className={({ isActive }) =>
-                    `block px-3 py-2 text-sm font-medium rounded-md transition-colors ${
-                      isActive
-                        ? 'text-teal-600 bg-teal-50'
-                        : 'text-slate-600 hover:text-slate-900 hover:bg-slate-50'
-                    }`
-                  }
+                  className={`block px-3 py-2 text-sm font-medium rounded-md transition-colors ${
+                    isActive(link.to)
+                      ? 'text-teal-600 bg-teal-50'
+                      : 'text-slate-600 hover:text-slate-900 hover:bg-slate-50'
+                  }`}
                 >
                   {link.label}
-                </NavLink>
+                </Link>
               ))}
               <Link
-                to="/contact"
+                href="/contact"
                 onClick={() => setMobileOpen(false)}
                 className="block mt-2 px-3 py-2 text-sm font-semibold text-center rounded-lg bg-teal-600 text-white hover:bg-teal-500"
               >
