@@ -10,6 +10,7 @@ const navLinks = [
   { to: '/learn', label: 'Learn' },
   { to: '/grow', label: 'Grow' },
   { to: '/automate', label: 'Automate' },
+  { to: '/government', label: 'Government' },
   { to: '/about', label: 'About' },
 ]
 

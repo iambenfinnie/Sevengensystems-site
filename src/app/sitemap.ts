@@ -3,7 +3,7 @@ import type { MetadataRoute } from 'next'
 const SITE_URL = 'https://sevengensystems.com'
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const routes = ['', '/grow', '/automate', '/learn', '/about', '/contact']
+  const routes = ['', '/grow', '/automate', '/learn', '/government', '/about', '/contact']
 
   return routes.map((route) => ({
     url: `${SITE_URL}${route}`,

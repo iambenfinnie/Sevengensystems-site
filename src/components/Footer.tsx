@@ -18,6 +18,7 @@ export function Footer() {
               <li><Link href="/grow" className="text-sm text-slate-400 hover:text-white transition-colors">Grow</Link></li>
               <li><Link href="/automate" className="text-sm text-slate-400 hover:text-white transition-colors">Automate</Link></li>
               <li><Link href="/learn" className="text-sm text-slate-400 hover:text-white transition-colors">Learn</Link></li>
+              <li><Link href="/government" className="text-sm text-slate-400 hover:text-white transition-colors">Government</Link></li>
               <li><Link href="/about" className="text-sm text-slate-400 hover:text-white transition-colors">About Us</Link></li>
               <li><Link href="/contact" className="text-sm text-slate-400 hover:text-white transition-colors">Contact</Link></li>
             </ul>
