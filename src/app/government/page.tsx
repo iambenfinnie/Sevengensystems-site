@@ -1,21 +1,20 @@
 import type { Metadata } from 'next'
-import Link from 'next/link'
 
 export const metadata: Metadata = {
-  title: 'Government & Procurement — Indigenous AI Prime',
+  title: 'Government & Procurement — Indigenous-Owned AI',
   description:
-    'Seven Gen Systems is an Indigenous-majority-owned AI firm built to be a real prime for Canadian federal departments and agencies. PSIB-eligible, CCIB certified, SAP Ariba registered.',
+    'Seven Gen Systems is an Indigenous-owned AI firm delivering operational AI for Canadian federal departments and agencies. PSIB-eligible, CCIB certified, SAP Ariba registered.',
   alternates: { canonical: '/government' },
   openGraph: {
-    title: 'Government & Procurement — Indigenous AI Prime',
+    title: 'Government & Procurement — Indigenous-Owned AI',
     description:
-      'An Indigenous-majority-owned AI firm built to be a real prime for Canadian federal departments and agencies. PSIB-eligible and certified.',
+      'An Indigenous-owned AI firm delivering operational AI for Canadian federal departments and agencies. PSIB-eligible and certified.',
     url: '/government',
   },
   twitter: {
-    title: 'Government & Procurement — Indigenous AI Prime',
+    title: 'Government & Procurement — Indigenous-Owned AI',
     description:
-      'An Indigenous-majority-owned AI firm built to be a real prime for Canadian federal departments and agencies.',
+      'An Indigenous-owned AI firm delivering operational AI for Canadian federal departments and agencies.',
   },
 }
 
@@ -23,22 +22,23 @@ const govServiceJsonLd = {
   '@context': 'https://schema.org',
   '@type': 'Service',
   name: 'AI Delivery for Federal Departments & Agencies',
-  serviceType: 'Indigenous AI prime contracting',
+  serviceType: 'Indigenous-owned AI delivery',
   provider: { '@type': 'Organization', name: 'Seven Gen Systems', url: 'https://sevengensystems.com' },
   areaServed: { '@type': 'Country', name: 'Canada' },
   audience: { '@type': 'Audience', audienceType: 'Government departments and agencies' },
   description:
-    'Indigenous-majority-owned AI automation, conversational AI, and predictive modelling delivery for Canadian federal departments. PSIB-eligible, CCIB certified, SAP Ariba registered.',
+    'Indigenous-owned AI automation, conversational AI, and predictive modelling delivery for Canadian federal departments. PSIB-eligible, CCIB certified, SAP Ariba registered.',
 }
 
 const CAPABILITY_STATEMENT_PATH = '/Seven-Gen-Systems-Capability-Statement.pdf'
+const INTRO_BOOKING = 'https://cal.com/ben-finnie/intro'
 
 const certifications = [
-  { name: 'Indigenous Business Directory', short: 'IBD', status: 'Verified' },
-  { name: 'Canadian Council for Indigenous Business', short: 'CCIB', status: 'Certified' },
-  { name: 'Procurement Business Number', short: 'PBN', status: '707060166PG0001' },
-  { name: 'SAP Ariba', short: 'Ariba', status: 'Registered' },
-  { name: 'GST / Business Number', short: 'GST/BN', status: 'Active' },
+  { name: 'Indigenous Business Directory', status: 'Verified' },
+  { name: 'Canadian Council for Indigenous Business', status: 'Certified' },
+  { name: 'Procurement Business Number', status: 'Active' },
+  { name: 'SAP Ariba', status: 'Registered' },
+  { name: 'GST / Business Number', status: 'Active' },
 ]
 
 const disciplines = [
@@ -74,12 +74,12 @@ export default function Page() {
             Federal &amp; Public Sector
           </p>
           <h1 className="mt-5 text-4xl sm:text-5xl font-extrabold tracking-tight leading-tight max-w-3xl">
-            An Indigenous-majority-owned AI firm, built to be a real prime.
+            Indigenous-owned AI delivery for Canadian government.
           </h1>
           <p className="mt-6 text-lg text-slate-300 leading-relaxed max-w-2xl">
             Seven Gen Systems delivers operational AI for Canadian federal departments and agencies.
-            We are 51% Indigenous-owned, PSIB-eligible, and we build and operate every engagement
-            end to end. No flag of convenience. No offshore delivery behind a Canadian face.
+            We are Indigenous-owned, PSIB-eligible, and we build and operate every engagement end to
+            end, with delivery kept in Canada.
           </p>
           <div className="mt-10 flex flex-wrap gap-4">
             <a
@@ -88,12 +88,14 @@ export default function Page() {
             >
               Download capability statement
             </a>
-            <Link
-              href="/contact"
+            <a
+              href={INTRO_BOOKING}
+              target="_blank"
+              rel="noopener noreferrer"
               className="inline-flex items-center px-7 py-3.5 text-sm font-semibold rounded-lg border border-slate-600 text-white hover:bg-slate-800 transition-colors"
             >
-              Book a discovery call
-            </Link>
+              Book an intro call
+            </a>
           </div>
         </div>
       </section>
@@ -107,7 +109,7 @@ export default function Page() {
           <div className="mt-8 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
             {certifications.map((cert) => (
               <div
-                key={cert.short}
+                key={cert.name}
                 className="flex items-start gap-3 rounded-xl border border-slate-200 p-5"
               >
                 <span className="mt-0.5 flex h-6 w-6 flex-shrink-0 items-center justify-center rounded-full bg-teal-600/10">
@@ -172,7 +174,7 @@ export default function Page() {
             <p>
               Every deployment is scoped, auditable, and built with clear human oversight. We
               document the methodology behind each model and automation so it can stand up to
-              evaluation. Delivery and quality assurance stay in Canada — they are never offshored.
+              evaluation, and delivery stays in Canada.
             </p>
           </div>
         </div>
@@ -184,17 +186,19 @@ export default function Page() {
           <h2 className="text-3xl sm:text-4xl font-bold">Teaming</h2>
           <p className="mt-6 text-lg text-slate-300 leading-relaxed">
             We partner with established prime contractors and bring Indigenous procurement
-            eligibility, real AI delivery capability, and accountable execution. If you are bidding
-            federal work and need an Indigenous prime or AI delivery partner who actually does the
-            work, let us know what you are pursuing.
+            eligibility, AI delivery capability, and accountable execution. If you are bidding
+            federal work and want an Indigenous-owned AI delivery partner, tell us what you are
+            pursuing.
           </p>
           <div className="mt-10">
-            <Link
-              href="/contact"
+            <a
+              href={INTRO_BOOKING}
+              target="_blank"
+              rel="noopener noreferrer"
               className="inline-flex items-center px-7 py-3.5 text-sm font-semibold rounded-lg bg-teal-500 text-slate-900 hover:bg-teal-400 transition-colors"
             >
               Start a teaming conversation
-            </Link>
+            </a>
           </div>
         </div>
       </section>
@@ -202,9 +206,11 @@ export default function Page() {
       {/* Final CTA */}
       <section className="bg-teal-700 text-white">
         <div className="mx-auto max-w-3xl px-4 py-20 sm:px-6 lg:px-8 text-center">
-          <h2 className="text-3xl sm:text-4xl font-bold">Put a real Indigenous prime on the file.</h2>
+          <h2 className="text-3xl sm:text-4xl font-bold">
+            Bring Indigenous-owned AI delivery to your next bid.
+          </h2>
           <p className="mt-5 text-lg text-teal-100 leading-relaxed">
-            Download our capability statement, or book a 30-minute call to talk through what you are
+            Download our capability statement, or book a short call to talk through what you are
             pursuing.
           </p>
           <div className="mt-10 flex flex-wrap justify-center gap-4">
@@ -214,12 +220,14 @@ export default function Page() {
             >
               Download capability statement
             </a>
-            <Link
-              href="/contact"
+            <a
+              href={INTRO_BOOKING}
+              target="_blank"
+              rel="noopener noreferrer"
               className="inline-flex items-center px-7 py-3.5 text-sm font-semibold rounded-lg border border-teal-400 text-white hover:bg-teal-600 transition-colors"
             >
-              Book a discovery call
-            </Link>
+              Book an intro call
+            </a>
           </div>
         </div>
       </section>
