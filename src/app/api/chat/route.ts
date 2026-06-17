@@ -78,7 +78,7 @@ export async function POST(req: Request) {
     return Response.json({ error: 'Missing messages' }, { status: 400 })
   }
 
-  const client = new Anthropic({ apiKey: process.env.ANTHROPIC_API_KEY })
+  const client = new Anthropic({ apiKey: process.env.anthropic })
 
   try {
     const response = await client.messages.create({
