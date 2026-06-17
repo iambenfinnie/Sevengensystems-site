@@ -3,7 +3,6 @@ import { useEffect, useRef, useState } from 'react'
 import Link from 'next/link'
 import { motion } from 'motion/react'
 import { ArrowRight, PhoneCall, TrendingUp, Zap, GraduationCap, CheckCircle2 } from 'lucide-react'
-import { ContainerScroll } from '@/components/ui/container-scroll-animation'
 import { AnimatedTestimonials } from '@/components/ui/animated-testimonials'
 
 // ---------------------------------------------------------------------------
@@ -258,24 +257,22 @@ export function HomeContent() {
       </section>
 
       {/* ── Scroll Reveal ────────────────────────────────────────────────── */}
-      <section className="bg-white overflow-x-hidden">
-        <ContainerScroll
-          titleComponent={
-            <div className="text-center px-4">
-              <p className="text-xs font-bold text-teal-600 uppercase tracking-widest mb-3">
-                What we actually build
-              </p>
-              <h2 className="text-3xl sm:text-4xl font-bold text-slate-900">
-                AI that fits the way you work
-              </h2>
-              <p className="mt-4 text-slate-600 max-w-xl mx-auto text-base leading-relaxed">
-                Every engagement is built around your business. Here's a look at what we deliver across our three service areas.
-              </p>
-            </div>
-          }
-        >
-          {/* Dark service overview — swap this out for a real screenshot when ready */}
-          <div className="h-full grid grid-cols-1 sm:grid-cols-3 gap-4">
+      <section className="bg-white">
+        <div className="mx-auto max-w-5xl px-4 py-24 sm:px-6 lg:px-8">
+          <div className="text-center px-4">
+            <p className="text-xs font-bold text-teal-600 uppercase tracking-widest mb-3">
+              What we actually build
+            </p>
+            <h2 className="text-3xl sm:text-4xl font-bold text-slate-900">
+              AI that fits the way you work
+            </h2>
+            <p className="mt-4 text-slate-600 max-w-xl mx-auto text-base leading-relaxed">
+              Every engagement is built around your business. Here's a look at what we deliver across our three service areas.
+            </p>
+          </div>
+          {/* Dark service overview */}
+          <div className="mt-12 rounded-2xl border border-slate-800 bg-slate-900 p-4 md:p-6">
+            <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
             {[
               {
                 icon: TrendingUp,
@@ -327,8 +324,9 @@ export function HomeContent() {
                 </ul>
               </div>
             ))}
+            </div>
           </div>
-        </ContainerScroll>
+        </div>
       </section>
 
       {/* ── What We Do ───────────────────────────────────────────────────── */}
