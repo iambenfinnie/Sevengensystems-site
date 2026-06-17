@@ -1,4 +1,6 @@
-import { Link } from 'react-router-dom'
+'use client'
+
+import Link from 'next/link'
 import { motion } from 'motion/react'
 
 const fadeUp = {
@@ -6,7 +8,7 @@ const fadeUp = {
   show: { opacity: 1, y: 0 },
 }
 
-export function Learn() {
+export function LearnContent() {
   return (
     <div>
 
@@ -45,7 +47,7 @@ export function Learn() {
             transition={{ duration: 0.5, ease: 'easeOut', delay: 0.3 }}
           >
             <Link
-              to="/contact"
+              href="/contact"
               className="inline-flex items-center px-8 py-4 text-base font-semibold rounded-lg bg-teal-600 text-white hover:bg-teal-500 transition-colors"
             >
               Book a Free Discovery Call
@@ -308,7 +310,7 @@ export function Learn() {
           </p>
           <div className="mt-10">
             <Link
-              to="/contact"
+              href="/contact"
               className="inline-flex items-center px-8 py-4 text-base font-semibold rounded-lg bg-white text-teal-700 hover:bg-teal-50 transition-colors"
             >
               Book a Free Discovery Call

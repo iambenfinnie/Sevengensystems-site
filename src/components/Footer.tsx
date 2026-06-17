@@ -1,4 +1,4 @@
-import { Link } from 'react-router-dom'
+import Link from 'next/link'
 
 export function Footer() {
   return (
@@ -15,11 +15,12 @@ export function Footer() {
           <div>
             <h4 className="text-sm font-semibold text-slate-300 uppercase tracking-wider">Company</h4>
             <ul className="mt-4 space-y-2">
-              <li><Link to="/grow" className="text-sm text-slate-400 hover:text-white transition-colors">Grow</Link></li>
-              <li><Link to="/automate" className="text-sm text-slate-400 hover:text-white transition-colors">Automate</Link></li>
-              <li><Link to="/learn" className="text-sm text-slate-400 hover:text-white transition-colors">Learn</Link></li>
-              <li><Link to="/about" className="text-sm text-slate-400 hover:text-white transition-colors">About Us</Link></li>
-              <li><Link to="/contact" className="text-sm text-slate-400 hover:text-white transition-colors">Contact</Link></li>
+              <li><Link href="/grow" className="text-sm text-slate-400 hover:text-white transition-colors">Grow</Link></li>
+              <li><Link href="/automate" className="text-sm text-slate-400 hover:text-white transition-colors">Automate</Link></li>
+              <li><Link href="/learn" className="text-sm text-slate-400 hover:text-white transition-colors">Learn</Link></li>
+              <li><Link href="/government" className="text-sm text-slate-400 hover:text-white transition-colors">Government</Link></li>
+              <li><Link href="/about" className="text-sm text-slate-400 hover:text-white transition-colors">About Us</Link></li>
+              <li><Link href="/contact" className="text-sm text-slate-400 hover:text-white transition-colors">Contact</Link></li>
             </ul>
           </div>
           <div>
@@ -27,7 +28,7 @@ export function Footer() {
             <p className="mt-4 text-sm text-slate-400">contact@sevengensystems.com</p>
             <div className="mt-6">
               <Link
-                to="/contact"
+                href="/contact"
                 className="inline-flex items-center px-5 py-2 text-sm font-semibold rounded-lg bg-teal-600 text-white hover:bg-teal-500 transition-colors"
               >
                 Book a Free Discovery Call

@@ -1,7 +1,6 @@
-import type { VercelRequest, VercelResponse } from '@vercel/node'
 import Anthropic from '@anthropic-ai/sdk'
 
-const client = new Anthropic({ apiKey: process.env.ANTHROPIC_API_KEY })
+export const runtime = 'nodejs'
 
 const SYSTEM_PROMPT = `You are Jane, the virtual assistant for Seven Gen Systems — an Indigenous-majority-owned AI automation and training company based in Canada. Your name is Jane. Your role is to answer questions about Seven Gen's services, build rapport with potential clients, capture lead information, and guide interested visitors toward booking a free discovery call.
 
@@ -65,16 +64,21 @@ We don't publish fixed prices because every engagement is scoped individually. W
 
 7. **Booking CTA:** The contact page is at /contact on this site. You can refer people there for booking.`
 
-export default async function handler(req: VercelRequest, res: VercelResponse) {
-  if (req.method !== 'POST') {
-    return res.status(405).json({ error: 'Method not allowed' })
+export async function POST(req: Request) {
+  let body: { messages?: Anthropic.MessageParam[] }
+  try {
+    body = await req.json()
+  } catch {
+    return Response.json({ error: 'Invalid JSON' }, { status: 400 })
   }
 
-  const { messages } = req.body
+  const { messages } = body
 
   if (!messages || !Array.isArray(messages) || messages.length === 0) {
-    return res.status(400).json({ error: 'Missing messages' })
+    return Response.json({ error: 'Missing messages' }, { status: 400 })
   }
+
+  const client = new Anthropic({ apiKey: process.env.ANTHROPIC_API_KEY })
 
   try {
     const response = await client.messages.create({
@@ -95,9 +99,9 @@ export default async function handler(req: VercelRequest, res: VercelResponse) {
       .map((block) => (block as { type: 'text'; text: string }).text)
       .join('')
 
-    return res.status(200).json({ reply })
+    return Response.json({ reply })
   } catch (err) {
     console.error('Chat error:', err)
-    return res.status(500).json({ error: 'Failed to get response. Please try again.' })
+    return Response.json({ error: 'Failed to get response. Please try again.' }, { status: 500 })
   }
 }

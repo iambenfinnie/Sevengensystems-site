@@ -1,5 +1,6 @@
+'use client'
 import { useEffect, useRef, useState } from 'react'
-import { Link } from 'react-router-dom'
+import Link from 'next/link'
 import { motion } from 'motion/react'
 import { ArrowRight, PhoneCall, TrendingUp, Zap, GraduationCap, CheckCircle2 } from 'lucide-react'
 import { ContainerScroll } from '@/components/ui/container-scroll-animation'
@@ -109,7 +110,7 @@ const stats = [
 // ---------------------------------------------------------------------------
 // Page
 // ---------------------------------------------------------------------------
-export function Home() {
+export function HomeContent() {
   const [phraseIndex, setPhraseIndex] = useState(0)
 
   useEffect(() => {
@@ -181,14 +182,14 @@ export function Home() {
             transition={{ duration: 0.5, ease: 'easeOut', delay: 0.35 }}
           >
             <Link
-              to="/contact"
+              href="/contact"
               className="inline-flex items-center justify-center gap-2 px-8 py-4 text-base font-semibold rounded-lg bg-teal-600 text-white hover:bg-teal-500 transition-colors"
             >
               <PhoneCall className="w-4 h-4" />
               Book a Free Discovery Call
             </Link>
             <Link
-              to="/grow"
+              href="/grow"
               className="inline-flex items-center justify-center gap-2 px-8 py-4 text-base font-semibold rounded-lg border border-slate-600 text-slate-300 hover:border-slate-400 hover:text-white transition-colors"
             >
               See What We Do
@@ -380,7 +381,7 @@ export function Home() {
                 <h3 className="mt-2 text-lg font-semibold text-slate-900">{service.title}</h3>
                 <p className="mt-3 text-sm text-slate-600 leading-relaxed">{service.desc}</p>
                 <Link
-                  to={service.link}
+                  href={service.link}
                   className="mt-5 inline-block text-sm font-semibold text-teal-600 hover:text-teal-700 transition-colors"
                 >
                   {service.linkText}
@@ -485,7 +486,7 @@ export function Home() {
             transition={{ duration: 0.5, ease: 'easeOut', delay: 0.45 }}
           >
             <Link
-              to="/contact"
+              href="/contact"
               className="inline-flex items-center justify-center gap-2 px-8 py-4 text-base font-semibold rounded-lg bg-teal-600 text-white hover:bg-teal-500 transition-colors"
             >
               <PhoneCall className="w-4 h-4" />
@@ -609,7 +610,7 @@ export function Home() {
           </p>
           <div className="mt-10">
             <Link
-              to="/contact"
+              href="/contact"
               className="inline-flex items-center px-8 py-4 text-base font-semibold rounded-lg bg-white text-teal-700 hover:bg-teal-50 transition-colors"
             >
               Book a Free Discovery Call

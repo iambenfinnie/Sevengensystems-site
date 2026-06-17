@@ -1,4 +1,5 @@
-import { Link } from 'react-router-dom'
+'use client'
+import Link from 'next/link'
 import { motion } from 'motion/react'
 
 const fadeUp = {
@@ -6,7 +7,7 @@ const fadeUp = {
   show: { opacity: 1, y: 0 },
 }
 
-export function About() {
+export function AboutContent() {
   return (
     <div>
 
@@ -214,7 +215,7 @@ export function About() {
           <p className="mt-4 text-lg text-teal-100">Let's have a conversation.</p>
           <div className="mt-8">
             <Link
-              to="/contact"
+              href="/contact"
               className="inline-flex items-center px-8 py-4 text-base font-semibold rounded-lg bg-white text-teal-700 hover:bg-teal-50 transition-colors"
             >
               Get in Touch
