@@ -2,6 +2,18 @@ import { Resend } from 'resend'
 
 export const runtime = 'nodejs'
 
+const HTML_ESCAPES: Record<string, string> = {
+  '&': '&amp;',
+  '<': '&lt;',
+  '>': '&gt;',
+  '"': '&quot;',
+  "'": '&#39;',
+}
+
+function escapeHtml(value: string): string {
+  return value.replace(/[&<>"']/g, (char) => HTML_ESCAPES[char])
+}
+
 export async function POST(req: Request) {
   let body: { name?: string; email?: string; organization?: string; message?: string }
   try {
@@ -26,11 +38,11 @@ export async function POST(req: Request) {
       subject: `New message from ${name}`,
       html: `
         <h2>New Contact Form Submission</h2>
-        <p><strong>Name:</strong> ${name}</p>
-        <p><strong>Email:</strong> <a href="mailto:${email}">${email}</a></p>
-        ${organization ? `<p><strong>Organization:</strong> ${organization}</p>` : ''}
+        <p><strong>Name:</strong> ${escapeHtml(name)}</p>
+        <p><strong>Email:</strong> <a href="mailto:${encodeURIComponent(email)}">${escapeHtml(email)}</a></p>
+        ${organization ? `<p><strong>Organization:</strong> ${escapeHtml(organization)}</p>` : ''}
         <p><strong>Message:</strong></p>
-        <p style="white-space: pre-wrap;">${message}</p>
+        <p style="white-space: pre-wrap;">${escapeHtml(message)}</p>
       `,
     })
 
