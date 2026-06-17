@@ -84,9 +84,11 @@ export default function Page() {
           <div className="mt-10 flex flex-wrap gap-4">
             <a
               href={CAPABILITY_STATEMENT_PATH}
+              target="_blank"
+              rel="noopener noreferrer"
               className="inline-flex items-center px-7 py-3.5 text-sm font-semibold rounded-lg bg-teal-500 text-slate-900 hover:bg-teal-400 transition-colors"
             >
-              Download capability statement
+              View capability statement
             </a>
             <a
               href={INTRO_BOOKING}
@@ -210,15 +212,17 @@ export default function Page() {
             Bring Indigenous-owned AI delivery to your next bid.
           </h2>
           <p className="mt-5 text-lg text-teal-100 leading-relaxed">
-            Download our capability statement, or book a short call to talk through what you are
+            Read our capability statement, or book a short call to talk through what you are
             pursuing.
           </p>
           <div className="mt-10 flex flex-wrap justify-center gap-4">
             <a
               href={CAPABILITY_STATEMENT_PATH}
+              target="_blank"
+              rel="noopener noreferrer"
               className="inline-flex items-center px-7 py-3.5 text-sm font-semibold rounded-lg bg-white text-teal-700 hover:bg-teal-50 transition-colors"
             >
-              Download capability statement
+              View capability statement
             </a>
             <a
               href={INTRO_BOOKING}
