@@ -28,7 +28,7 @@ export async function POST(req: Request) {
     return Response.json({ error: 'Missing required fields' }, { status: 400 })
   }
 
-  const resend = new Resend(process.env.RESEND_API_KEY)
+  const resend = new Resend(process.env.resend)
 
   try {
     const { data, error } = await resend.emails.send({
