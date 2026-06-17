@@ -1,9 +1,7 @@
 import type { Metadata } from 'next'
 import { Plus_Jakarta_Sans } from 'next/font/google'
 import './globals.css'
-import { Navigation } from '@/components/Navigation'
-import { Footer } from '@/components/Footer'
-import { ChatWidget } from '@/components/ChatWidget'
+import { SiteShell } from '@/components/SiteShell'
 
 const jakarta = Plus_Jakarta_Sans({
   subsets: ['latin'],
@@ -115,10 +113,7 @@ export default function RootLayout({
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationJsonLd) }}
         />
-        <Navigation />
-        <main className="flex-1">{children}</main>
-        <Footer />
-        <ChatWidget />
+        <SiteShell>{children}</SiteShell>
       </body>
     </html>
   )
