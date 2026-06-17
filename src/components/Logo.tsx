@@ -1,17 +1,18 @@
 export function Logo() {
   return (
-    <div className="flex items-center gap-2">
-      <div className="h-11 w-11 flex-shrink-0 overflow-hidden mt-2">
-        <img
-          src="/favicon.png"
-          alt=""
-          className="h-[170%] w-[170%] object-cover -translate-x-[20%] -translate-y-[20%]"
-          style={{ mixBlendMode: 'multiply' }}
-        />
-      </div>
-      <div className="flex flex-col items-center leading-none whitespace-nowrap">
-        <span className="text-slate-900 font-bold text-base tracking-tight">Seven Gen</span>
-        <span className="text-slate-500 font-semibold text-[10px] tracking-[0.18em] uppercase mt-[3px]">Systems</span>
+    <div className="flex items-center gap-2.5">
+      <img
+        src="/wordmark-mark.svg"
+        alt="Seven Gen Systems"
+        className="h-9 w-auto flex-shrink-0"
+      />
+      <div className="flex flex-col justify-center leading-none whitespace-nowrap">
+        <span className="font-sans text-[19px] font-extrabold tracking-tight text-slate-900">
+          Seven Gen
+        </span>
+        <span className="font-sans text-[10px] font-semibold uppercase tracking-[0.2em] text-slate-500 mt-[3px]">
+          Systems
+        </span>
       </div>
     </div>
   )
