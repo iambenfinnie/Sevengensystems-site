@@ -9,7 +9,7 @@ export function Logo() {
         <img
           src="/favicon.png"
           alt=""
-          className="h-[170%] w-[170%] object-cover -translate-x-[20%] -translate-y-[20%]"
+          className="h-[182%] w-[182%] object-cover -translate-x-[21%] -translate-y-[21%]"
           style={{ mixBlendMode: 'multiply' }}
         />
       </div>
