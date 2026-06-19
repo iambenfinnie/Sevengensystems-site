@@ -39,14 +39,6 @@ export const metadata: Metadata = {
   creator: SITE_NAME,
   publisher: SITE_NAME,
   alternates: { canonical: '/' },
-  icons: {
-    icon: [
-      { url: '/favicon.png', type: 'image/png' },
-      { url: '/favicon.svg', type: 'image/svg+xml' },
-    ],
-    shortcut: '/favicon.png',
-    apple: '/favicon.png',
-  },
   openGraph: {
     type: 'website',
     locale: 'en_CA',
